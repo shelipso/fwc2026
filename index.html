@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>FIFA World Cup 2026 - Schedule</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #222; line-height: 1.5; }
+.header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 24px 16px; text-align: center; }
+.header h1 { font-size: 1.5rem; margin-bottom: 4px; }
+.header p { font-size: 0.85rem; color: #aab; }
+.container { max-width: 1200px; margin: 0 auto; padding: 12px; }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; align-items: center; }
+.controls input.search { flex: 1; min-width: 200px; padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.9rem; }
+.controls label { font-size: 0.85rem; color: #666; display: flex; align-items: center; gap: 4px; cursor: pointer; }
+.stats { font-size: 0.85rem; color: #888; padding: 4px 0 8px; }
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+th { background: #f0f0f5; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; color: #555; padding: 10px 8px; text-align: left; font-weight: 600; border-bottom: 2px solid #e0e0e0; }
+td { padding: 8px; border-bottom: 1px solid #eee; font-size: 0.85rem; vertical-align: middle; }
+tr:hover { background: #fafaff; }
+tr.australia { background: #fff8e1; }
+tr.australia:hover { background: #fff3c4; }
+tr.today { background: #e8f5e9; }
+tr.today:hover { background: #c8e6c9; }
+tr.date-header td { background: #f9f9fb; font-weight: 600; font-size: 0.82rem; color: #555; padding: 6px 8px; }
+tr.date-header.date-today td { background: #e8f5e9; color: #2e7d32; }
+tr.finished td.score-col { font-weight: 600; color: #1a1a2e; }
+tr.is-live td.score-col.score-live { font-weight: 700; color: #d32f2f; animation: pulse-live 2s infinite; }
+@keyframes pulse-live { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+.score-col.score-live { color: #d32f2f; font-weight: 600; }
+.date-col { white-space: nowrap; color: #666; font-size: 0.8rem; }
+.time-col { white-space: nowrap; font-weight: 500; }
+.match-col { font-weight: 500; }
+.stage-col { font-size: 0.75rem; color: #888; }
+.channel-col { white-space: nowrap; font-size: 0.8rem; color: #555; }
+.score-col { text-align: center; font-weight: 500; min-width: 50px; }
+.score-col.pending { color: #aaa; font-size: 0.75rem; }
+td.aus-flag { color: #f57c00; font-weight: 700; }
+.hidden { display: none; }
+.footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #999; }
+.no-matches { display: none; text-align: center; padding: 24px; color: #999; grid-column: 1 / -1; }
+.live-badge { display: inline-block; background: #d32f2f; color: white; font-size: 0.65rem; font-weight: 700; padding: 1px 6px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
+@media (max-width: 768px) {
+  th, td { padding: 6px 4px; font-size: 0.78rem; }
+  .date-col, .channel-col { font-size: 0.72rem; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>FIFA World Cup 2026</h1>
+  <p>All 104 matches on SBS / SBS VICELAND / SBS On Demand (AEST times)</p>
+</div>
+<div class="container">
+  <div class="controls">
+    <input type="text" class="search" id="searchInput" placeholder="Search team..." autocomplete="off">
+    <label><input type="checkbox" id="ausOnly"> Australia only</label>
+    <label><input type="checkbox" id="todayOnly"> Today only</label>
+    <label><input type="checkbox" id="hideKnockout"> Hide knockout (TBD)</label>
+    <button id="todayBtn">Today</button>
+  </div>
+  <div class="stats" id="stats">Showing 104 of 104 matches</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="date-col">Date</th>
+        <th class="time-col">AEST</th>
+        <th>Match</th>
+        <th class="stage-col">Stage</th>
+        <th class="channel-col">Channel</th>
+        <th class="score-col">Score</th>
+      </tr>
+    </thead>
+    <tbody id="matchesBody">
+      <tr class="date-header"><td colspan="6">Friday, 12 June</td></tr><tr class="" data-date="2026-06-12" data-home="mexico" data-away="south africa" data-aus="0" data-knockout="0" data-match-num="1"><td class="date-col">Fri 12 Jun</td><td class="time-col">05:00</td><td class="match-col ">Mexico v South Africa</td><td class="stage-col">Group A (1v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">2-0</td></tr><tr class="" data-date="2026-06-12" data-home="korea republic" data-away="czechia" data-aus="0" data-knockout="0" data-match-num="2"><td class="date-col">Fri 12 Jun</td><td class="time-col">12:00</td><td class="match-col ">Korea Republic v Czechia</td><td class="stage-col">Group A (2v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">2-1</td></tr><tr class="date-header"><td colspan="6">Saturday, 13 June</td></tr><tr class="" data-date="2026-06-13" data-home="canada" data-away="bosnia-herzegovina" data-aus="0" data-knockout="0" data-match-num="3"><td class="date-col">Sat 13 Jun</td><td class="time-col">05:00</td><td class="match-col ">Canada v Bosnia-Herzegovina</td><td class="stage-col">Group B (2v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">1-1</td></tr><tr class="" data-date="2026-06-13" data-home="usa" data-away="paraguay" data-aus="0" data-knockout="0" data-match-num="4"><td class="date-col">Sat 13 Jun</td><td class="time-col">11:00</td><td class="match-col ">USA v Paraguay</td><td class="stage-col">Group D (1v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">4-1</td></tr><tr class="date-header"><td colspan="6">Sunday, 14 June</td></tr><tr class="" data-date="2026-06-14" data-home="qatar" data-away="switzerland" data-aus="0" data-knockout="0" data-match-num="8"><td class="date-col">Sun 14 Jun</td><td class="time-col">05:00</td><td class="match-col ">Qatar v Switzerland</td><td class="stage-col">Group B (3v1)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">1-1</td></tr><tr class="" data-date="2026-06-14" data-home="brazil" data-away="morocco" data-aus="0" data-knockout="0" data-match-num="7"><td class="date-col">Sun 14 Jun</td><td class="time-col">08:00</td><td class="match-col ">Brazil v Morocco</td><td class="stage-col">Group C (2v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">1-1</td></tr><tr class="" data-date="2026-06-14" data-home="haiti" data-away="scotland" data-aus="0" data-knockout="0" data-match-num="5"><td class="date-col">Sun 14 Jun</td><td class="time-col">11:00</td><td class="match-col ">Haiti v Scotland</td><td class="stage-col">Group C (4v1)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">0-1</td></tr><tr class="australia" data-date="2026-06-14" data-home="australia" data-away="türkiye" data-aus="1" data-knockout="0" data-match-num="6"><td class="date-col">Sun 14 Jun</td><td class="time-col">14:00</td><td class="match-col aus-flag">Australia v Türkiye</td><td class="stage-col">Group D (2v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">2-0</td></tr><tr class="date-header"><td colspan="6">Monday, 15 June</td></tr><tr class="" data-date="2026-06-15" data-home="germany" data-away="curaçao" data-aus="0" data-knockout="0" data-match-num="10"><td class="date-col">Mon 15 Jun</td><td class="time-col">03:00</td><td class="match-col ">Germany v Curaçao</td><td class="stage-col">Group E (1v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">7-1</td></tr><tr class="" data-date="2026-06-15" data-home="netherlands" data-away="japan" data-aus="0" data-knockout="0" data-match-num="11"><td class="date-col">Mon 15 Jun</td><td class="time-col">06:00</td><td class="match-col ">Netherlands v Japan</td><td class="stage-col">Group F (2v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">2-2</td></tr><tr class="" data-date="2026-06-15" data-home="cote d'ivoire" data-away="ecuador" data-aus="0" data-knockout="0" data-match-num="9"><td class="date-col">Mon 15 Jun</td><td class="time-col">09:00</td><td class="match-col ">Cote d'Ivoire v Ecuador</td><td class="stage-col">Group E (2v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">1-0</td></tr><tr class="" data-date="2026-06-15" data-home="sweden" data-away="tunisia" data-aus="0" data-knockout="0" data-match-num="12"><td class="date-col">Mon 15 Jun</td><td class="time-col">12:00</td><td class="match-col ">Sweden v Tunisia</td><td class="stage-col">Group F (1v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">5-1</td></tr><tr class="date-header"><td colspan="6">Tuesday, 16 June</td></tr><tr class="" data-date="2026-06-16" data-home="spain" data-away="cabo verde" data-aus="0" data-knockout="0" data-match-num="14"><td class="date-col">Tue 16 Jun</td><td class="time-col">02:00</td><td class="match-col ">Spain v Cabo Verde</td><td class="stage-col">Group H (3v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">0-0</td></tr><tr class="" data-date="2026-06-16" data-home="belgium" data-away="egypt" data-aus="0" data-knockout="0" data-match-num="16"><td class="date-col">Tue 16 Jun</td><td class="time-col">05:00</td><td class="match-col ">Belgium v Egypt</td><td class="stage-col">Group G (3v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">1-1</td></tr><tr class="" data-date="2026-06-16" data-home="saudi arabia" data-away="uruguay" data-aus="0" data-knockout="0" data-match-num="13"><td class="date-col">Tue 16 Jun</td><td class="time-col">08:00</td><td class="match-col ">Saudi Arabia v Uruguay</td><td class="stage-col">Group H (1v2)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">1-1</td></tr><tr class="" data-date="2026-06-16" data-home="ir iran" data-away="new zealand" data-aus="0" data-knockout="0" data-match-num="15"><td class="date-col">Tue 16 Jun</td><td class="time-col">11:00</td><td class="match-col ">IR Iran v New Zealand</td><td class="stage-col">Group G (1v2)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">2-2</td></tr><tr class="date-header"><td colspan="6">Wednesday, 17 June</td></tr><tr class="" data-date="2026-06-17" data-home="france" data-away="senegal" data-aus="0" data-knockout="0" data-match-num="17"><td class="date-col">Wed 17 Jun</td><td class="time-col">05:00</td><td class="match-col ">France v Senegal</td><td class="stage-col">Group I (2v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">3-1</td></tr><tr class="" data-date="2026-06-17" data-home="iraq" data-away="norway" data-aus="0" data-knockout="0" data-match-num="18"><td class="date-col">Wed 17 Jun</td><td class="time-col">08:00</td><td class="match-col ">Iraq v Norway</td><td class="stage-col">Group I (4v1)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">1-4</td></tr><tr class="" data-date="2026-06-17" data-home="argentina" data-away="algeria" data-aus="0" data-knockout="0" data-match-num="19"><td class="date-col">Wed 17 Jun</td><td class="time-col">11:00</td><td class="match-col ">Argentina v Algeria</td><td class="stage-col">Group J (1v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">3-0</td></tr><tr class="" data-date="2026-06-17" data-home="austria" data-away="jordan" data-aus="0" data-knockout="0" data-match-num="20"><td class="date-col">Wed 17 Jun</td><td class="time-col">14:00</td><td class="match-col ">Austria v Jordan</td><td class="stage-col">Group J (2v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">3-1</td></tr><tr class="date-header"><td colspan="6">Thursday, 18 June</td></tr><tr class="" data-date="2026-06-18" data-home="portugal" data-away="congo dr" data-aus="0" data-knockout="0" data-match-num="23"><td class="date-col">Thu 18 Jun</td><td class="time-col">03:00</td><td class="match-col ">Portugal v Congo DR</td><td class="stage-col">Group K (2v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">1-1</td></tr><tr class="" data-date="2026-06-18" data-home="england" data-away="croatia" data-aus="0" data-knockout="0" data-match-num="22"><td class="date-col">Thu 18 Jun</td><td class="time-col">06:00</td><td class="match-col ">England v Croatia</td><td class="stage-col">Group L (1v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">4-2</td></tr><tr class="" data-date="2026-06-18" data-home="ghana" data-away="panama" data-aus="0" data-knockout="0" data-match-num="21"><td class="date-col">Thu 18 Jun</td><td class="time-col">09:00</td><td class="match-col ">Ghana v Panama</td><td class="stage-col">Group L (2v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">1-0</td></tr><tr class="" data-date="2026-06-18" data-home="uzbekistan" data-away="colombia" data-aus="0" data-knockout="0" data-match-num="24"><td class="date-col">Thu 18 Jun</td><td class="time-col">12:00</td><td class="match-col ">Uzbekistan v Colombia</td><td class="stage-col">Group K (4v1)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">1-3</td></tr><tr class="date-header date-today"><td colspan="6">&#9654; Friday, 19 June</td></tr><tr class=" today" data-date="2026-06-19" data-home="czechia" data-away="south africa" data-aus="0" data-knockout="0" data-match-num="25"><td class="date-col">Fri 19 Jun</td><td class="time-col">02:00</td><td class="match-col ">Czechia v South Africa</td><td class="stage-col">Group A (3v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">1-1</td></tr><tr class=" today" data-date="2026-06-19" data-home="switzerland" data-away="bosnia-herzegovina" data-aus="0" data-knockout="0" data-match-num="26"><td class="date-col">Fri 19 Jun</td><td class="time-col">05:00</td><td class="match-col ">Switzerland v Bosnia-Herzegovina</td><td class="stage-col">Group B (1v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col ">4-1</td></tr><tr class=" today" data-date="2026-06-19" data-home="canada" data-away="qatar" data-aus="0" data-knockout="0" data-match-num="27"><td class="date-col">Fri 19 Jun</td><td class="time-col">08:00</td><td class="match-col ">Canada v Qatar</td><td class="stage-col">Group B (2v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class=" today" data-date="2026-06-19" data-home="mexico" data-away="korea republic" data-aus="0" data-knockout="0" data-match-num="28"><td class="date-col">Fri 19 Jun</td><td class="time-col">11:00</td><td class="match-col ">Mexico v Korea Republic</td><td class="stage-col">Group A (1v2)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Saturday, 20 June</td></tr><tr class="australia" data-date="2026-06-20" data-home="usa" data-away="australia" data-aus="1" data-knockout="0" data-match-num="32"><td class="date-col">Sat 20 Jun</td><td class="time-col">05:00</td><td class="match-col aus-flag">USA v Australia</td><td class="stage-col">Group D (1v2)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-20" data-home="scotland" data-away="morocco" data-aus="0" data-knockout="0" data-match-num="30"><td class="date-col">Sat 20 Jun</td><td class="time-col">08:00</td><td class="match-col ">Scotland v Morocco</td><td class="stage-col">Group C (1v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-20" data-home="brazil" data-away="haiti" data-aus="0" data-knockout="0" data-match-num="29"><td class="date-col">Sat 20 Jun</td><td class="time-col">10:30</td><td class="match-col ">Brazil v Haiti</td><td class="stage-col">Group C (2v4)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-20" data-home="türkiye" data-away="paraguay" data-aus="0" data-knockout="0" data-match-num="31"><td class="date-col">Sat 20 Jun</td><td class="time-col">13:00</td><td class="match-col ">Türkiye v Paraguay</td><td class="stage-col">Group D (3v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Sunday, 21 June</td></tr><tr class="" data-date="2026-06-21" data-home="netherlands" data-away="sweden" data-aus="0" data-knockout="0" data-match-num="35"><td class="date-col">Sun 21 Jun</td><td class="time-col">03:00</td><td class="match-col ">Netherlands v Sweden</td><td class="stage-col">Group F (2v1)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-21" data-home="germany" data-away="cote d'ivoire" data-aus="0" data-knockout="0" data-match-num="33"><td class="date-col">Sun 21 Jun</td><td class="time-col">06:00</td><td class="match-col ">Germany v Cote d'Ivoire</td><td class="stage-col">Group E (1v2)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-21" data-home="ecuador" data-away="curaçao" data-aus="0" data-knockout="0" data-match-num="34"><td class="date-col">Sun 21 Jun</td><td class="time-col">10:00</td><td class="match-col ">Ecuador v Curaçao</td><td class="stage-col">Group E (3v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-21" data-home="tunisia" data-away="japan" data-aus="0" data-knockout="0" data-match-num="36"><td class="date-col">Sun 21 Jun</td><td class="time-col">14:00</td><td class="match-col ">Tunisia v Japan</td><td class="stage-col">Group F (4v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Monday, 22 June</td></tr><tr class="" data-date="2026-06-22" data-home="spain" data-away="saudi arabia" data-aus="0" data-knockout="0" data-match-num="38"><td class="date-col">Mon 22 Jun</td><td class="time-col">02:00</td><td class="match-col ">Spain v Saudi Arabia</td><td class="stage-col">Group H (3v1)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-22" data-home="belgium" data-away="ir iran" data-aus="0" data-knockout="0" data-match-num="39"><td class="date-col">Mon 22 Jun</td><td class="time-col">05:00</td><td class="match-col ">Belgium v IR Iran</td><td class="stage-col">Group G (3v1)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-22" data-home="uruguay" data-away="cabo verde" data-aus="0" data-knockout="0" data-match-num="37"><td class="date-col">Mon 22 Jun</td><td class="time-col">08:00</td><td class="match-col ">Uruguay v Cabo Verde</td><td class="stage-col">Group H (2v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-22" data-home="new zealand" data-away="egypt" data-aus="0" data-knockout="0" data-match-num="40"><td class="date-col">Mon 22 Jun</td><td class="time-col">11:00</td><td class="match-col ">New Zealand v Egypt</td><td class="stage-col">Group G (2v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Tuesday, 23 June</td></tr><tr class="" data-date="2026-06-23" data-home="argentina" data-away="austria" data-aus="0" data-knockout="0" data-match-num="43"><td class="date-col">Tue 23 Jun</td><td class="time-col">03:00</td><td class="match-col ">Argentina v Austria</td><td class="stage-col">Group J (1v2)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-23" data-home="france" data-away="iraq" data-aus="0" data-knockout="0" data-match-num="42"><td class="date-col">Tue 23 Jun</td><td class="time-col">07:00</td><td class="match-col ">France v Iraq</td><td class="stage-col">Group I (2v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-23" data-home="norway" data-away="senegal" data-aus="0" data-knockout="0" data-match-num="41"><td class="date-col">Tue 23 Jun</td><td class="time-col">10:00</td><td class="match-col ">Norway v Senegal</td><td class="stage-col">Group I (1v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-23" data-home="jordan" data-away="algeria" data-aus="0" data-knockout="0" data-match-num="44"><td class="date-col">Tue 23 Jun</td><td class="time-col">13:00</td><td class="match-col ">Jordan v Algeria</td><td class="stage-col">Group J (3v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Wednesday, 24 June</td></tr><tr class="" data-date="2026-06-24" data-home="portugal" data-away="uzbekistan" data-aus="0" data-knockout="0" data-match-num="47"><td class="date-col">Wed 24 Jun</td><td class="time-col">03:00</td><td class="match-col ">Portugal v Uzbekistan</td><td class="stage-col">Group K (2v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-24" data-home="england" data-away="ghana" data-aus="0" data-knockout="0" data-match-num="45"><td class="date-col">Wed 24 Jun</td><td class="time-col">06:00</td><td class="match-col ">England v Ghana</td><td class="stage-col">Group L (1v2)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-24" data-home="panama" data-away="croatia" data-aus="0" data-knockout="0" data-match-num="46"><td class="date-col">Wed 24 Jun</td><td class="time-col">09:00</td><td class="match-col ">Panama v Croatia</td><td class="stage-col">Group L (3v4)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-24" data-home="colombia" data-away="congo dr" data-aus="0" data-knockout="0" data-match-num="48"><td class="date-col">Wed 24 Jun</td><td class="time-col">12:00</td><td class="match-col ">Colombia v Congo DR</td><td class="stage-col">Group K (1v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Thursday, 25 June</td></tr><tr class="" data-date="2026-06-25" data-home="switzerland" data-away="canada" data-aus="0" data-knockout="0" data-match-num="51"><td class="date-col">Thu 25 Jun</td><td class="time-col">05:00</td><td class="match-col ">Switzerland v Canada</td><td class="stage-col">Group B (1v2)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-25" data-home="bosnia-herzegovina" data-away="qatar" data-aus="0" data-knockout="0" data-match-num="52"><td class="date-col">Thu 25 Jun</td><td class="time-col">05:00</td><td class="match-col ">Bosnia-Herzegovina v Qatar</td><td class="stage-col">Group B (4v3)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-25" data-home="scotland" data-away="brazil" data-aus="0" data-knockout="0" data-match-num="49"><td class="date-col">Thu 25 Jun</td><td class="time-col">08:00</td><td class="match-col ">Scotland v Brazil</td><td class="stage-col">Group C (1v2)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-25" data-home="morocco" data-away="haiti" data-aus="0" data-knockout="0" data-match-num="50"><td class="date-col">Thu 25 Jun</td><td class="time-col">08:00</td><td class="match-col ">Morocco v Haiti</td><td class="stage-col">Group C (3v4)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-25" data-home="czechia" data-away="mexico" data-aus="0" data-knockout="0" data-match-num="53"><td class="date-col">Thu 25 Jun</td><td class="time-col">11:00</td><td class="match-col ">Czechia v Mexico</td><td class="stage-col">Group A (3v1)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-25" data-home="south africa" data-away="korea republic" data-aus="0" data-knockout="0" data-match-num="54"><td class="date-col">Thu 25 Jun</td><td class="time-col">11:00</td><td class="match-col ">South Africa v Korea Republic</td><td class="stage-col">Group A (4v2)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Friday, 26 June</td></tr><tr class="" data-date="2026-06-26" data-home="curaçao" data-away="cote d'ivoire" data-aus="0" data-knockout="0" data-match-num="55"><td class="date-col">Fri 26 Jun</td><td class="time-col">06:00</td><td class="match-col ">Curaçao v Cote d'Ivoire</td><td class="stage-col">Group E (4v2)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-26" data-home="ecuador" data-away="germany" data-aus="0" data-knockout="0" data-match-num="56"><td class="date-col">Fri 26 Jun</td><td class="time-col">06:00</td><td class="match-col ">Ecuador v Germany</td><td class="stage-col">Group E (3v1)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-26" data-home="japan" data-away="sweden" data-aus="0" data-knockout="0" data-match-num="57"><td class="date-col">Fri 26 Jun</td><td class="time-col">09:00</td><td class="match-col ">Japan v Sweden</td><td class="stage-col">Group F (3v1)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-26" data-home="tunisia" data-away="netherlands" data-aus="0" data-knockout="0" data-match-num="58"><td class="date-col">Fri 26 Jun</td><td class="time-col">09:00</td><td class="match-col ">Tunisia v Netherlands</td><td class="stage-col">Group F (4v2)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-26" data-home="türkiye" data-away="usa" data-aus="0" data-knockout="0" data-match-num="59"><td class="date-col">Fri 26 Jun</td><td class="time-col">12:00</td><td class="match-col ">Türkiye v USA</td><td class="stage-col">Group D (3v1)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="australia" data-date="2026-06-26" data-home="paraguay" data-away="australia" data-aus="1" data-knockout="0" data-match-num="60"><td class="date-col">Fri 26 Jun</td><td class="time-col">12:00</td><td class="match-col aus-flag">Paraguay v Australia</td><td class="stage-col">Group D (4v2)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Saturday, 27 June</td></tr><tr class="" data-date="2026-06-27" data-home="norway" data-away="france" data-aus="0" data-knockout="0" data-match-num="61"><td class="date-col">Sat 27 Jun</td><td class="time-col">05:00</td><td class="match-col ">Norway v France</td><td class="stage-col">Group I (1v2)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-27" data-home="senegal" data-away="iraq" data-aus="0" data-knockout="0" data-match-num="62"><td class="date-col">Sat 27 Jun</td><td class="time-col">05:00</td><td class="match-col ">Senegal v Iraq</td><td class="stage-col">Group I (3v4)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-27" data-home="cabo verde" data-away="saudi arabia" data-aus="0" data-knockout="0" data-match-num="65"><td class="date-col">Sat 27 Jun</td><td class="time-col">10:00</td><td class="match-col ">Cabo Verde v Saudi Arabia</td><td class="stage-col">Group H (4v1)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-27" data-home="uruguay" data-away="spain" data-aus="0" data-knockout="0" data-match-num="66"><td class="date-col">Sat 27 Jun</td><td class="time-col">10:00</td><td class="match-col ">Uruguay v Spain</td><td class="stage-col">Group H (2v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-27" data-home="egypt" data-away="ir iran" data-aus="0" data-knockout="0" data-match-num="63"><td class="date-col">Sat 27 Jun</td><td class="time-col">13:00</td><td class="match-col ">Egypt v IR Iran</td><td class="stage-col">Group G (4v1)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-27" data-home="new zealand" data-away="belgium" data-aus="0" data-knockout="0" data-match-num="64"><td class="date-col">Sat 27 Jun</td><td class="time-col">13:00</td><td class="match-col ">New Zealand v Belgium</td><td class="stage-col">Group G (2v3)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Sunday, 28 June</td></tr><tr class="" data-date="2026-06-28" data-home="panama" data-away="england" data-aus="0" data-knockout="0" data-match-num="67"><td class="date-col">Sun 28 Jun</td><td class="time-col">07:00</td><td class="match-col ">Panama v England</td><td class="stage-col">Group L (3v1)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-28" data-home="croatia" data-away="ghana" data-aus="0" data-knockout="0" data-match-num="68"><td class="date-col">Sun 28 Jun</td><td class="time-col">07:00</td><td class="match-col ">Croatia v Ghana</td><td class="stage-col">Group L (4v2)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-28" data-home="colombia" data-away="portugal" data-aus="0" data-knockout="0" data-match-num="71"><td class="date-col">Sun 28 Jun</td><td class="time-col">09:30</td><td class="match-col ">Colombia v Portugal</td><td class="stage-col">Group K (1v2)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-28" data-home="congo dr" data-away="uzbekistan" data-aus="0" data-knockout="0" data-match-num="72"><td class="date-col">Sun 28 Jun</td><td class="time-col">09:30</td><td class="match-col ">Congo DR v Uzbekistan</td><td class="stage-col">Group K (3v4)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-28" data-home="algeria" data-away="austria" data-aus="0" data-knockout="0" data-match-num="69"><td class="date-col">Sun 28 Jun</td><td class="time-col">12:00</td><td class="match-col ">Algeria v Austria</td><td class="stage-col">Group J (4v2)</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-28" data-home="jordan" data-away="argentina" data-aus="0" data-knockout="0" data-match-num="70"><td class="date-col">Sun 28 Jun</td><td class="time-col">12:00</td><td class="match-col ">Jordan v Argentina</td><td class="stage-col">Group J (3v1)</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Monday, 29 June</td></tr><tr class="" data-date="2026-06-29" data-home="2a" data-away="2b" data-aus="0" data-knockout="0" data-match-num="73"><td class="date-col">Mon 29 Jun</td><td class="time-col">05:00</td><td class="match-col ">2A v 2B</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Tuesday, 30 June</td></tr><tr class="" data-date="2026-06-30" data-home="1c" data-away="2f" data-aus="0" data-knockout="0" data-match-num="76"><td class="date-col">Tue 30 Jun</td><td class="time-col">03:00</td><td class="match-col ">1C v 2F</td><td class="stage-col">Round of 32</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-30" data-home="1e" data-away="3abcdf" data-aus="0" data-knockout="0" data-match-num="74"><td class="date-col">Tue 30 Jun</td><td class="time-col">06:30</td><td class="match-col ">1E v 3ABCDF</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-06-30" data-home="1f" data-away="2c" data-aus="0" data-knockout="0" data-match-num="75"><td class="date-col">Tue 30 Jun</td><td class="time-col">11:00</td><td class="match-col ">1F v 2C</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Wednesday, 1 July</td></tr><tr class="" data-date="2026-07-01" data-home="2e" data-away="2i" data-aus="0" data-knockout="0" data-match-num="78"><td class="date-col">Wed 1 Jul</td><td class="time-col">03:00</td><td class="match-col ">2E v 2I</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-07-01" data-home="1i" data-away="3cdfgh" data-aus="0" data-knockout="0" data-match-num="77"><td class="date-col">Wed 1 Jul</td><td class="time-col">07:00</td><td class="match-col ">1I v 3CDFGH</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-07-01" data-home="1a" data-away="3cefhi" data-aus="0" data-knockout="0" data-match-num="79"><td class="date-col">Wed 1 Jul</td><td class="time-col">11:00</td><td class="match-col ">1A v 3CEFHI</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Thursday, 2 July</td></tr><tr class="" data-date="2026-07-02" data-home="1l" data-away="3ehijk" data-aus="0" data-knockout="0" data-match-num="80"><td class="date-col">Thu 2 Jul</td><td class="time-col">02:00</td><td class="match-col ">1L v 3EHIJK</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-07-02" data-home="1g" data-away="3aehij" data-aus="0" data-knockout="0" data-match-num="82"><td class="date-col">Thu 2 Jul</td><td class="time-col">06:00</td><td class="match-col ">1G v 3AEHIJ</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-07-02" data-home="1d" data-away="3befij" data-aus="0" data-knockout="0" data-match-num="81"><td class="date-col">Thu 2 Jul</td><td class="time-col">10:00</td><td class="match-col ">1D v 3BEFIJ</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Friday, 3 July</td></tr><tr class="" data-date="2026-07-03" data-home="1h" data-away="2j" data-aus="0" data-knockout="0" data-match-num="84"><td class="date-col">Fri 3 Jul</td><td class="time-col">05:00</td><td class="match-col ">1H v 2J</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-07-03" data-home="2k" data-away="2l" data-aus="0" data-knockout="0" data-match-num="83"><td class="date-col">Fri 3 Jul</td><td class="time-col">09:00</td><td class="match-col ">2K v 2L</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-07-03" data-home="1b" data-away="3efgij" data-aus="0" data-knockout="0" data-match-num="85"><td class="date-col">Fri 3 Jul</td><td class="time-col">13:00</td><td class="match-col ">1B v 3EFGIJ</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Saturday, 4 July</td></tr><tr class="" data-date="2026-07-04" data-home="2d" data-away="2g" data-aus="0" data-knockout="0" data-match-num="88"><td class="date-col">Sat 4 Jul</td><td class="time-col">04:00</td><td class="match-col ">2D v 2G</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-07-04" data-home="1j" data-away="2h" data-aus="0" data-knockout="0" data-match-num="86"><td class="date-col">Sat 4 Jul</td><td class="time-col">08:00</td><td class="match-col ">1J v 2H</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="" data-date="2026-07-04" data-home="1k" data-away="3deijl" data-aus="0" data-knockout="0" data-match-num="87"><td class="date-col">Sat 4 Jul</td><td class="time-col">11:30</td><td class="match-col ">1K v 3DEIJL</td><td class="stage-col">Round of 32</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending"></td></tr><tr class="date-header"><td colspan="6">Sunday, 5 July</td></tr><tr class="" data-date="2026-07-05" data-home="winner #73" data-away="winner #75" data-aus="0" data-knockout="1" data-match-num="90"><td class="date-col">Sun 5 Jul</td><td class="time-col">03:00</td><td class="match-col ">Winner #73 v Winner #75</td><td class="stage-col">Round of 16</td><td class="channel-col">VICELAND / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="" data-date="2026-07-05" data-home="winner #74" data-away="winner #77" data-aus="0" data-knockout="1" data-match-num="89"><td class="date-col">Sun 5 Jul</td><td class="time-col">07:00</td><td class="match-col ">Winner #74 v Winner #77</td><td class="stage-col">Round of 16</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="date-header"><td colspan="6">Monday, 6 July</td></tr><tr class="" data-date="2026-07-06" data-home="winner #76" data-away="winner #78" data-aus="0" data-knockout="1" data-match-num="91"><td class="date-col">Mon 6 Jul</td><td class="time-col">06:00</td><td class="match-col ">Winner #76 v Winner #78</td><td class="stage-col">Round of 16</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="" data-date="2026-07-06" data-home="winner #79" data-away="winner #80" data-aus="0" data-knockout="1" data-match-num="92"><td class="date-col">Mon 6 Jul</td><td class="time-col">10:00</td><td class="match-col ">Winner #79 v Winner #80</td><td class="stage-col">Round of 16</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="date-header"><td colspan="6">Tuesday, 7 July</td></tr><tr class="" data-date="2026-07-07" data-home="winner #83" data-away="winner #84" data-aus="0" data-knockout="1" data-match-num="93"><td class="date-col">Tue 7 Jul</td><td class="time-col">05:00</td><td class="match-col ">Winner #83 v Winner #84</td><td class="stage-col">Round of 16</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="" data-date="2026-07-07" data-home="winner #81" data-away="winner #82" data-aus="0" data-knockout="1" data-match-num="94"><td class="date-col">Tue 7 Jul</td><td class="time-col">10:00</td><td class="match-col ">Winner #81 v Winner #82</td><td class="stage-col">Round of 16</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="date-header"><td colspan="6">Wednesday, 8 July</td></tr><tr class="" data-date="2026-07-08" data-home="winner #86" data-away="winner #88" data-aus="0" data-knockout="1" data-match-num="95"><td class="date-col">Wed 8 Jul</td><td class="time-col">02:00</td><td class="match-col ">Winner #86 v Winner #88</td><td class="stage-col">Round of 16</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="" data-date="2026-07-08" data-home="winner #85" data-away="winner #87" data-aus="0" data-knockout="1" data-match-num="96"><td class="date-col">Wed 8 Jul</td><td class="time-col">06:00</td><td class="match-col ">Winner #85 v Winner #87</td><td class="stage-col">Round of 16</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="date-header"><td colspan="6">Friday, 10 July</td></tr><tr class="" data-date="2026-07-10" data-home="winner m#89" data-away="winner m#90" data-aus="0" data-knockout="1" data-match-num="97"><td class="date-col">Fri 10 Jul</td><td class="time-col">06:00</td><td class="match-col ">Winner M#89 v Winner M#90</td><td class="stage-col">Quarter-Finals</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="date-header"><td colspan="6">Saturday, 11 July</td></tr><tr class="" data-date="2026-07-11" data-home="winner m#93" data-away="winner m#94" data-aus="0" data-knockout="1" data-match-num="98"><td class="date-col">Sat 11 Jul</td><td class="time-col">05:00</td><td class="match-col ">Winner M#93 v Winner M#94</td><td class="stage-col">Quarter-Finals</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="date-header"><td colspan="6">Sunday, 12 July</td></tr><tr class="" data-date="2026-07-12" data-home="winner m#91" data-away="winner m#92" data-aus="0" data-knockout="1" data-match-num="99"><td class="date-col">Sun 12 Jul</td><td class="time-col">07:00</td><td class="match-col ">Winner M#91 v Winner M#92</td><td class="stage-col">Quarter-Finals</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="" data-date="2026-07-12" data-home="winner m#95" data-away="winner m#96" data-aus="0" data-knockout="1" data-match-num="100"><td class="date-col">Sun 12 Jul</td><td class="time-col">11:00</td><td class="match-col ">Winner M#95 v Winner M#96</td><td class="stage-col">Quarter-Finals</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="date-header"><td colspan="6">Wednesday, 15 July</td></tr><tr class="" data-date="2026-07-15" data-home="winner m#97" data-away="winner m#98" data-aus="0" data-knockout="1" data-match-num="101"><td class="date-col">Wed 15 Jul</td><td class="time-col">05:00</td><td class="match-col ">Winner M#97 v Winner M#98</td><td class="stage-col">Semi-Finals</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="date-header"><td colspan="6">Thursday, 16 July</td></tr><tr class="" data-date="2026-07-16" data-home="winner m#99" data-away="winner m#100" data-aus="0" data-knockout="1" data-match-num="102"><td class="date-col">Thu 16 Jul</td><td class="time-col">05:00</td><td class="match-col ">Winner M#99 v Winner M#100</td><td class="stage-col">Semi-Finals</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="date-header"><td colspan="6">Sunday, 19 July</td></tr><tr class="" data-date="2026-07-19" data-home="runner up m#101" data-away="runner up m#102" data-aus="0" data-knockout="1" data-match-num="103"><td class="date-col">Sun 19 Jul</td><td class="time-col">07:00</td><td class="match-col ">Runner Up M#101 v Runner up M#102</td><td class="stage-col">Bronze Final</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr><tr class="date-header"><td colspan="6">Monday, 20 July</td></tr><tr class="" data-date="2026-07-20" data-home="winner m#101" data-away="winner m#102" data-aus="0" data-knockout="1" data-match-num="104"><td class="date-col">Mon 20 Jul</td><td class="time-col">05:00</td><td class="match-col ">Winner M#101 v Winner M#102</td><td class="stage-col">Final</td><td class="channel-col">SBS / SBS On Demand</td><td class="score-col pending">TBD</td></tr>
+    </tbody>
+  </table>
+  <div id="noMatches" class="no-matches">No matches found</div>
+</div>
+<div class="footer">
+  Fixtures from SBS Australia schedule. Times in AEST. Scores can be added via the results API.
+</div>
+<script>
+(function() {
+  'use strict';
+  const searchInput = document.getElementById('searchInput');
+  const ausOnly = document.getElementById('ausOnly');
+  const todayOnly = document.getElementById('todayOnly');
+  const hideKnockout = document.getElementById('hideKnockout');
+  const tbody = document.getElementById('matchesBody');
+  const stats = document.getElementById('stats');
+  const noMatches = document.getElementById('noMatches');
+  const allRows = Array.from(tbody.querySelectorAll('tr'));
+  const dataRows = allRows.filter(r => !r.classList.contains('date-header'));
+
+  function getTodayStr() {
+    const d = new Date();
+    const opts = { timeZone: 'Australia/Sydney', year: 'numeric', month: '2-digit', day: '2-digit' };
+    const parts = new Intl.DateTimeFormat('en-CA', opts).formatToParts(d);
+    return parts[0].value + '-' + parts[2].value + '-' + parts[4].value;
+  }
+
+  const today = getTodayStr();
+
+  function filterMatches() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const showAusOnly = ausOnly.checked;
+    const showTodayOnly = todayOnly.checked;
+    const hideKnockoutTBD = hideKnockout.checked;
+
+    let visible = 0;
+
+    for (const row of dataRows) {
+      const home = (row.getAttribute('data-home') || '').toLowerCase();
+      const away = (row.getAttribute('data-away') || '').toLowerCase();
+      const isAus = row.getAttribute('data-aus') === '1';
+      const isTodays = row.getAttribute('data-date') === today;
+      const isKnockout = row.getAttribute('data-knockout') === '1';
+
+      let show = true;
+      if (showAusOnly && !isAus) show = false;
+      if (show && showTodayOnly && !isTodays) show = false;
+      if (show && hideKnockoutTBD && isKnockout) show = false;
+      if (show && searchTerm) {
+        show = home.includes(searchTerm) || away.includes(searchTerm);
+      }
+
+      row.classList.toggle('hidden', !show);
+      if (show) visible++;
+    }
+
+    // Toggle date headers based on whether any children are visible
+    for (const row of allRows) {
+      if (!row.classList.contains('date-header')) continue;
+      let next = row.nextElementSibling;
+      let hasVisible = false;
+      while (next && !next.classList.contains('date-header')) {
+        if (!next.classList.contains('hidden')) {
+          hasVisible = true;
+          break;
+        }
+        next = next.nextElementSibling;
+      }
+      row.classList.toggle('hidden', !hasVisible);
+    }
+
+    stats.textContent = 'Showing ' + visible + ' of ' + dataRows.length + ' matches';
+    noMatches.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  function scrollToToday() {
+    todayOnly.checked = true;
+    filterMatches();
+    const firstToday = tbody.querySelector('tr.date-header.date-today');
+    if (firstToday) firstToday.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  searchInput.addEventListener('input', filterMatches);
+  ausOnly.addEventListener('change', filterMatches);
+  todayOnly.addEventListener('change', filterMatches);
+  hideKnockout.addEventListener('change', filterMatches);
+  document.getElementById('todayBtn').addEventListener('click', scrollToToday);
+
+  /** Parse 'HH:MM' kickoff into Date (AEST, on match date) */
+  function parseKickoff(dateStr, kickoffStr) {
+    const [h, m] = kickoffStr.split(':').map(Number);
+    const d = new Date(dateStr + 'T00:00:00+10:00');
+    d.setHours(h, m, 0, 0);
+    return d;
+  }
+
+  /** Compute what to show in the score cell and which CSS classes */
+  function computeDisplay(res, date, kickoff) {
+    const now = new Date();
+    const ko = parseKickoff(date, kickoff);
+    const minsSinceKO = (now - ko) / 60000;
+
+    // Finished match with result
+    if (res && res.status === 'FT') {
+      return { text: res.home_score + '-' + res.away_score, cls: 'score-finished', live: false };
+    }
+    // Half-time with result data
+    if (res && res.status === 'HT') {
+      const s = (res.home_score != null) ? (res.home_score + '-' + res.away_score + ' HT') : 'HT';
+      return { text: s, cls: 'score-live', live: true };
+    }
+    // Live match with result data — show score + minute
+    if (res && res.status === 'LIVE') {
+      const score = (res.home_score != null) ? (res.home_score + '-' + res.away_score) : '-';
+      const min = res.minute || Math.floor(Math.min(minsSinceKO, 130));
+      return { text: score + ' ' + min + "'", cls: 'score-live', live: true };
+    }
+
+    // Match is within live window but no score data yet in results.json.
+    // Show status like "HT" or "44'" so users know the match is in progress.
+    if (minsSinceKO >= 0 && minsSinceKO <= 135) {
+      if (minsSinceKO >= 45 && minsSinceKO < 60) {
+        return { text: 'HT', cls: 'score-live', live: true };
+      }
+      if (minsSinceKO >= 105 && minsSinceKO < 120) {
+        return { text: 'HT ET', cls: 'score-live', live: true };
+      }
+      const min = Math.floor(Math.min(minsSinceKO, 135));
+      return { text: min + "'", cls: 'score-live', live: true };
+    }
+
+    return { text: '', cls: 'pending', live: false };
+  }
+
+  /** Compute team positions per group from results */
+  function computeStandings(results) {
+    const groups = {};
+    const teamInfo = {};
+    for (const res of results) {
+      const grp = res.stage || '';
+      if (!grp.startsWith('Group ')) continue;
+      const g = grp.replace('Group ', '');
+      if (!groups[g]) groups[g] = {};
+      if (!groups[g][res.home]) groups[g][res.home] = { pts:0, gd:0, gs:0 };
+      if (!groups[g][res.away]) groups[g][res.away] = { pts:0, gd:0, gs:0 };
+      teamInfo[res.home.toLowerCase()] = { team: res.home, group: g };
+      teamInfo[res.away.toLowerCase()] = { team: res.away, group: g };
+      if (res.status === 'FT') {
+        const diff = res.home_score - res.away_score;
+        groups[g][res.home].gd += diff;
+        groups[g][res.away].gd -= diff;
+        groups[g][res.home].gs += res.home_score;
+        groups[g][res.away].gs += res.away_score;
+        if (diff > 0) groups[g][res.home].pts += 3;
+        else if (diff < 0) groups[g][res.away].pts += 3;
+        else { groups[g][res.home].pts += 1; groups[g][res.away].pts += 1; }
+      }
+    }
+    const posMap = {}; // team_lower -> { group, pos, total }
+    for (const [g, teams] of Object.entries(groups)) {
+      const sorted = Object.entries(teams)
+        .map(([team, st]) => ({ team, ...st }))
+        .sort((a, b) => b.pts - a.pts || b.gd - a.gd || b.gs - a.gs);
+      const total = sorted.length;
+      sorted.forEach((entry, idx) => {
+        posMap[entry.team.toLowerCase()] = { group: g, pos: idx + 1, total };
+      });
+    }
+    return posMap;
+  }
+
+  /* ── ESPN Auto-Fetch -- the ONLY data source ──
+   *  No results.json required. ESPN returns all 100+ WC matches when queried
+   *  with the full tournament date range. We fetch that once, then refresh
+   *  today's matches every 5 min for live updates. */
+  const ESPN_BASE = 'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard';
+  const ESPN_ALL_URL = ESPN_BASE + '?limit=1000&dates=20260612-20260719';
+
+  // Map ESPN displayName -> our schedule name (lowercase keys)
+  const ESPN_TO_US = {
+    'united states': 'usa',
+    'south korea': 'korea republic',
+    'ivory coast': "cote d'ivoire",
+    'iran': 'ir iran',
+    'cape verde': 'cabo verde',
+  };
+  function ourName(espnName) {
+    return ESPN_TO_US[espnName.toLowerCase()] || espnName.toLowerCase();
+  }
+
+  /** Fetch ESPN data for the given URL, overlay it on the results array,
+   *  and update the DOM. Returns the updated results array. */
+  async function refreshScores() {
+    try {
+      // Fetch all WC matches from ESPN in one call
+      const resp = await fetch(ESPN_ALL_URL + '&_=' + Date.now());
+      const data = await resp.json();
+      const events = data.events || [];
+
+      // Build result map: team-pair -> { home_score, away_score, status, minute }
+      // Use team name pairs as key (home+away sorted alphabetically)
+      const scoreMap = {};
+      for (const ev of events) {
+        const comp = (ev.competitions || [])[0];
+        if (!comp) continue;
+        let homeAbb, awayAbb, homeScore, awayScore;
+        for (const c of comp.competitors || []) {
+          const tn = c.team?.displayName || '';
+          if (c.homeAway === 'home') { homeAbb = ourName(tn); homeScore = c.score || '0'; }
+          else { awayAbb = ourName(tn); awayScore = c.score || '0'; }
+        }
+        if (!homeAbb || !awayAbb) continue;
+        const key = [homeAbb, awayAbb].sort().join(':');
+
+        const s = comp.status || {};
+        const completed = s.type?.completed;
+        const detail = s.type?.shortDetail || '';
+        const desc = s.type?.description || '';
+
+        let status, minute;
+        const isFT = completed || desc === 'Full Time' || detail === 'FT';
+        const isHT = detail === 'HT' || desc === 'Halftime';
+        const isScheduled = desc === 'Scheduled' || desc === 'Postponed';
+        if (isFT) { status = 'FT'; minute = undefined; }
+        else if (isHT) { status = 'HT'; minute = 45; }
+        else if (isScheduled) { status = 'SCHEDULED'; minute = undefined; }
+        else {
+          status = 'LIVE';
+          minute = detail.includes("'") ? detail.replace(/[^0-9+]/g, '') : Math.floor((Date.now() - new Date(comp.date).getTime()) / 60000);
+        }
+
+        scoreMap[key] = {
+          home_score: parseInt(homeScore, 10) || 0,
+          away_score: parseInt(awayScore, 10) || 0,
+          status: status,
+          minute: minute,
+          home: homeAbb,
+          away: awayAbb
+        };
+      }
+
+      // Build results array from DOM (all 104 matches), then overlay ESPN scores.
+      // If ESPN has no data for a match, preserve the pre-rendered DOM score.
+      const results = [];
+      for (const row of dataRows) {
+        const matchNum = parseInt(row.dataset.matchNum);
+        if (!matchNum) continue;
+        const home = (row.getAttribute('data-home') || '').toLowerCase();
+        const away = (row.getAttribute('data-away') || '').toLowerCase();
+        const key = [home, away].sort().join(':');
+        const espn = scoreMap[key];
+        // Extract group stage from pre-rendered stage cell (e.g. 'Group A (1v4)' -> 'Group A')
+        const stageEl = row.querySelector('.stage-col');
+        const stageTxt = stageEl ? stageEl.textContent.trim() : '';
+        const stage = stageTxt.startsWith('Group ') ? stageTxt.match(/^Group [A-Z]/)[0] : '';
+        // Preserve pre-rendered score from DOM when ESPN has no data
+        const cell = row.querySelector('.score-col');
+        const preScore = cell ? cell.textContent.trim() : '';
+        const hasPreScore = preScore.length > 0 && /^\d+/.test(preScore);
+        results.push({
+          match_num: matchNum,
+          home: home,
+          away: away,
+          stage: stage,
+          home_score: espn ? espn.home_score : (hasPreScore ? parseInt(preScore.split('-')[0]) : 0),
+          away_score: espn ? espn.away_score : (hasPreScore ? parseInt(preScore.split('-')[1]) : 0),
+          status: espn ? espn.status : (hasPreScore ? 'FT' : 'SCHEDULED'),
+          minute: espn ? espn.minute : undefined
+        });
+      }
+      const posMap = computeStandings(results);
+
+      for (const row of dataRows) {
+        const matchNum = parseInt(row.dataset.matchNum);
+        if (!matchNum) continue;
+        const date = row.getAttribute('data-date') || '';
+        const kickoff = row.querySelector('.time-col')?.textContent || '';
+        const isKnockout = row.getAttribute('data-knockout') === '1';
+        const res = results.find(r => r.match_num === matchNum);
+        const cell = row.querySelector('.score-col');
+        const stageCell = row.querySelector('.stage-col');
+        if (!cell) continue;
+
+        // Update score
+        const disp = computeDisplay(res, date, kickoff);
+        if (cell.textContent !== disp.text) {
+          cell.textContent = disp.text;
+          cell.classList.remove('pending', 'score-finished', 'score-live');
+          cell.classList.add(disp.cls);
+          row.classList.toggle('is-live', disp.live);
+        }
+
+        // Update stage text with positions (group stage only)
+        if (stageCell && !isKnockout) {
+          const home = row.getAttribute('data-home') || '';
+          const away = row.getAttribute('data-away') || '';
+          const hPos = posMap[home];
+          const aPos = posMap[away];
+          let newStage = 'Group';
+          if (hPos && aPos && hPos.group === aPos.group) {
+            newStage = 'Group ' + hPos.group + ' (' + hPos.pos + 'v' + aPos.pos + ')';
+          } else if (hPos) {
+            newStage = 'Group ' + hPos.group + ' (' + hPos.pos + ')';
+          } else if (aPos) {
+            newStage = 'Group ' + aPos.group + ' (' + aPos.pos + ')';
+          }
+          if (stageCell.textContent !== newStage) {
+            stageCell.textContent = newStage;
+          }
+        }
+      }
+    } catch(e) { /* silent */ }
+  }
+
+  // Fix pre-rendered date-today: use the first match row's data-date after each header
+  const realToday = getTodayStr();
+  for (let i = 0; i < allRows.length; i++) {
+    const row = allRows[i];
+    if (row.classList.contains('date-header')) {
+      // Get the date from the first non-header sibling that has data-date
+      let next = row.nextElementSibling;
+      let headerDate = '';
+      while (next) {
+        if (next.classList.contains('date-header')) break;
+        const dd = next.getAttribute('data-date');
+        if (dd) { headerDate = dd; break; }
+        next = next.nextElementSibling;
+      }
+      row.classList.toggle('date-today', headerDate === realToday);
+    }
+  }
+
+  // Initial load: refresh scores immediately, then every 5 minutes
+  refreshScores();
+  setInterval(refreshScores, 300000);
+})();
+</script>
+</body>
+</html>

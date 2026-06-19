@@ -1,0 +1,286 @@
+{
+  "matches": [
+    {
+      "match_num": 1,
+      "date": "2026-06-12",
+      "home": "Mexico",
+      "away": "South Africa",
+      "home_score": 2,
+      "away_score": 0,
+      "status": "FT",
+      "stage": "Group A"
+    },
+    {
+      "match_num": 2,
+      "date": "2026-06-12",
+      "home": "Korea Republic",
+      "away": "Czechia",
+      "home_score": 2,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group A"
+    },
+    {
+      "match_num": 3,
+      "date": "2026-06-13",
+      "home": "Canada",
+      "away": "Bosnia-Herzegovina",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group B"
+    },
+    {
+      "match_num": 4,
+      "date": "2026-06-13",
+      "home": "USA",
+      "away": "Paraguay",
+      "home_score": 4,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group D"
+    },
+    {
+      "match_num": 5,
+      "date": "2026-06-14",
+      "home": "Haiti",
+      "away": "Scotland",
+      "home_score": 0,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group C"
+    },
+    {
+      "match_num": 6,
+      "date": "2026-06-14",
+      "home": "Australia",
+      "away": "T\u00fcrkiye",
+      "home_score": 2,
+      "away_score": 0,
+      "status": "FT",
+      "stage": "Group D"
+    },
+    {
+      "match_num": 7,
+      "date": "2026-06-14",
+      "home": "Brazil",
+      "away": "Morocco",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group C"
+    },
+    {
+      "match_num": 8,
+      "date": "2026-06-14",
+      "home": "Qatar",
+      "away": "Switzerland",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group B"
+    },
+    {
+      "match_num": 9,
+      "date": "2026-06-15",
+      "home": "Cote d'Ivoire",
+      "away": "Ecuador",
+      "home_score": 1,
+      "away_score": 0,
+      "status": "FT",
+      "stage": "Group E"
+    },
+    {
+      "match_num": 10,
+      "date": "2026-06-15",
+      "home": "Germany",
+      "away": "Cura\u00e7ao",
+      "home_score": 7,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group E"
+    },
+    {
+      "match_num": 11,
+      "date": "2026-06-15",
+      "home": "Netherlands",
+      "away": "Japan",
+      "home_score": 2,
+      "away_score": 2,
+      "status": "FT",
+      "stage": "Group F"
+    },
+    {
+      "match_num": 12,
+      "date": "2026-06-15",
+      "home": "Sweden",
+      "away": "Tunisia",
+      "home_score": 5,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group F"
+    },
+    {
+      "match_num": 13,
+      "date": "2026-06-16",
+      "home": "Saudi Arabia",
+      "away": "Uruguay",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group H"
+    },
+    {
+      "match_num": 14,
+      "date": "2026-06-16",
+      "home": "Spain",
+      "away": "Cabo Verde",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "FT",
+      "stage": "Group H"
+    },
+    {
+      "match_num": 15,
+      "date": "2026-06-16",
+      "home": "IR Iran",
+      "away": "New Zealand",
+      "home_score": 2,
+      "away_score": 2,
+      "status": "FT",
+      "stage": "Group G"
+    },
+    {
+      "match_num": 16,
+      "date": "2026-06-16",
+      "home": "Belgium",
+      "away": "Egypt",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group G"
+    },
+    {
+      "match_num": 17,
+      "date": "2026-06-17",
+      "home": "France",
+      "away": "Senegal",
+      "home_score": 3,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group I"
+    },
+    {
+      "match_num": 18,
+      "date": "2026-06-17",
+      "home": "Iraq",
+      "away": "Norway",
+      "home_score": 1,
+      "away_score": 4,
+      "status": "FT",
+      "stage": "Group I"
+    },
+    {
+      "match_num": 19,
+      "date": "2026-06-17",
+      "home": "Argentina",
+      "away": "Algeria",
+      "home_score": 3,
+      "away_score": 0,
+      "status": "FT",
+      "stage": "Group J"
+    },
+    {
+      "match_num": 20,
+      "date": "2026-06-17",
+      "home": "Austria",
+      "away": "Jordan",
+      "home_score": 3,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group J"
+    },
+    {
+      "match_num": 21,
+      "date": "2026-06-18",
+      "home": "Ghana",
+      "away": "Panama",
+      "home_score": 1,
+      "away_score": 0,
+      "status": "FT",
+      "stage": "Group L"
+    },
+    {
+      "match_num": 22,
+      "date": "2026-06-18",
+      "home": "England",
+      "away": "Croatia",
+      "home_score": 4,
+      "away_score": 2,
+      "status": "FT",
+      "stage": "Group L"
+    },
+    {
+      "match_num": 23,
+      "date": "2026-06-18",
+      "home": "Portugal",
+      "away": "Congo DR",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group K"
+    },
+    {
+      "match_num": 24,
+      "date": "2026-06-18",
+      "home": "Uzbekistan",
+      "away": "Colombia",
+      "home_score": 1,
+      "away_score": 3,
+      "status": "FT",
+      "stage": "Group K"
+    },
+    {
+      "match_num": 25,
+      "date": "2026-06-19",
+      "home": "Czechia",
+      "away": "South Africa",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group A"
+    },
+    {
+      "match_num": 26,
+      "date": "2026-06-19",
+      "home": "Switzerland",
+      "away": "Bosnia-Herzegovina",
+      "home_score": 4,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Group B"
+    },
+    {
+      "match_num": 27,
+      "date": "2026-06-19",
+      "home": "Canada",
+      "away": "Qatar",
+      "home_score": 6,
+      "away_score": 0,
+      "status": "FT",
+      "minute": null,
+      "stage": "Group B"
+    },
+    {
+      "match_num": 32,
+      "date": "2026-06-20",
+      "home": "USA",
+      "away": "Australia",
+      "home_score": 2,
+      "away_score": 0,
+      "status": "FT",
+      "stage": "",
+      "minute": null
+    }
+  ]
+}
