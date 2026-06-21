@@ -391,7 +391,8 @@ td.aus-flag { color: #f57c00; font-weight: 700; }
     } catch(e) { /* silent */ }
   }
 
-  // Fix pre-rendered date-today: use the first match row's data-date after each header
+  // Fix pre-rendered date-today / today classes: static HTML has stale classes
+  // from whenever it was last built. Recompute both date headers and match rows.
   const realToday = getTodayStr();
   for (let i = 0; i < allRows.length; i++) {
     const row = allRows[i];
@@ -406,6 +407,12 @@ td.aus-flag { color: #f57c00; font-weight: 700; }
         next = next.nextElementSibling;
       }
       row.classList.toggle('date-today', headerDate === realToday);
+    } else if (row.hasAttribute('data-date')) {
+      // Match row: strip stale "today" class, re-add only if it's the real today
+      row.classList.remove('today');
+      if (row.getAttribute('data-date') === realToday) {
+        row.classList.add('today');
+      }
     }
   }
 
