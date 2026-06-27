@@ -598,16 +598,34 @@ td.aus-flag { color: #f57c00; font-weight: 700; }
 
   async function refreshThirdPlaceTable() {
     let standings = [];
+    let autoSlots = {};
     try {
-      const r = await fetch('/api/standings?_=' + Date.now());
+      // Try live standings first (computed from ESPN)
+      const r = await fetch('/api/live-standings?_=' + Date.now());
       const data = await r.json();
       standings = data.standings || [];
+      autoSlots = data.auto_slots || {};
+      // Apply auto-resolved knockout slots
+      let updated = false;
+      for (const [slot, team] of Object.entries(autoSlots)) {
+        if (!knockoutState.group_slots[slot] || knockoutState.group_slots[slot] !== team) {
+          knockoutState.group_slots[slot] = team;
+          updated = true;
+        }
+      }
+      if (updated) refreshKnockoutDisplay();
     } catch(e) {
       try {
-        const r = await fetch('group_standings.json?_=' + Date.now());
+        const r = await fetch('/api/standings?_=' + Date.now());
         const data = await r.json();
         standings = data.standings || [];
-      } catch(e2) { /* no standings file */ }
+      } catch(e2) {
+        try {
+          const r = await fetch('group_standings.json?_=' + Date.now());
+          const data = await r.json();
+          standings = data.standings || [];
+        } catch(e3) { /* no standings file */ }
+      }
     }
 
     const rankings = computeThirdPlaceRankings(standings);
