@@ -44,9 +44,40 @@ td.aus-flag { color: #f57c00; font-weight: 700; }
 .footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #999; }
 .no-matches { display: none; text-align: center; padding: 24px; color: #999; grid-column: 1 / -1; }
 .live-badge { display: inline-block; background: #d32f2f; color: white; font-size: 0.65rem; font-weight: 700; padding: 1px 6px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
+/* ── Knockout resolution styles ── */
+.match-col .resolved { color: #1b5e20; font-weight: 700; }
+.match-col .unresolved { color: #999; font-style: italic; }
+/* ── Third-place rankings ── */
+#thirdPlaceTable { margin: 24px 0; }
+#thirdPlaceTable h2 { font-size: 1.1rem; color: #333; margin-bottom: 8px; }
+.thirds-table { width: 100%; max-width: 600px; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 16px; }
+.thirds-table th { background: #f0f0f5; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; color: #555; padding: 8px 6px; text-align: center; font-weight: 600; }
+.thirds-table td { padding: 6px; text-align: center; font-size: 0.82rem; border-bottom: 1px solid #eee; }
+.thirds-table tr.qualified { background: #e8f5e9; }
+.thirds-table tr.eliminated { background: #ffebee; }
+.thirds-table tr.elim-line td { border-bottom: 3px solid #333; font-weight: 700; font-size: 0.72rem; color: #555; padding: 2px; }
+/* ── Admin panel ── */
+#adminPanel { margin: 24px 0; padding: 16px; background: #fafafa; border: 1px solid #e0e0e0; border-radius: 8px; }
+#adminPanel h2 { font-size: 1.1rem; color: #333; margin-bottom: 8px; }
+#adminPanel h3 { font-size: 0.95rem; color: #555; margin: 12px 0 6px; }
+.admin-section { margin-bottom: 12px; }
+.admin-row { display: flex; gap: 6px; align-items: center; margin-bottom: 4px; flex-wrap: wrap; }
+.admin-row label { font-size: 0.82rem; font-weight: 600; min-width: 40px; color: #555; }
+.admin-row input { padding: 4px 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.82rem; flex: 1; min-width: 120px; max-width: 200px; }
+.admin-row button { padding: 4px 12px; background: #1a1a2e; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.78rem; }
+.admin-row button:hover { background: #0f3460; }
+.admin-toggle { cursor: pointer; font-size: 0.82rem; color: #1a1a2e; text-decoration: underline; margin-top: 16px; display: inline-block; }
+.admin-msg { font-size: 0.78rem; color: #2e7d32; margin-left: 8px; }
+#koAdminBtn { margin-right: 8px; }
+.thirds-admin-row { display: flex; gap: 4px; align-items: center; margin-bottom: 2px; font-size: 0.78rem; }
+.thirds-admin-row input { width: 40px; padding: 2px 4px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.76rem; text-align: center; }
+.thirds-admin-row select { padding: 2px 4px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.76rem; min-width: 140px; }
+.thirds-admin-row label { min-width: 60px; font-size: 0.76rem; color: #555; }
 @media (max-width: 768px) {
   th, td { padding: 6px 4px; font-size: 0.78rem; }
   .date-col, .channel-col { font-size: 0.72rem; }
+  .admin-row { flex-direction: column; align-items: stretch; }
+  .admin-row input { max-width: 100%; }
 }
 </style>
 </head>
@@ -80,9 +111,64 @@ td.aus-flag { color: #f57c00; font-weight: 700; }
     </tbody>
   </table>
   <div id="noMatches" class="no-matches">No matches found</div>
+
+  <!-- Third-Place Team Rankings -->
+  <div id="thirdPlaceTable">
+    <h2>3rd-Place Team Rankings (Top 8 Advance)</h2>
+    <table class="thirds-table">
+      <thead>
+        <tr>
+          <th>#</th><th>Team</th><th>Grp</th><th>P</th><th>GD</th><th>GF</th>
+        </tr>
+      </thead>
+      <tbody id="thirdsBody">
+        <tr><td colspan="6" style="color:#999;">Loading rankings…</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 <div class="footer">
   Fixtures from SBS Australia schedule. Times in AEST. Scores can be added via the results API.
+</div>
+
+<!-- Admin Panel (hidden by default, toggle with ?admin=1) -->
+<div class="container">
+  <span class="admin-toggle" id="adminToggle" style="display:none;">Hide Admin Panel</span>
+  <div id="adminPanel" style="display:none;">
+    <h2>Admin Panel</h2>
+
+    <!-- Knockout State Admin -->
+    <div class="admin-section">
+      <h3>Knockout Team Slots</h3>
+      <div id="koSlotsAdmin"></div>
+      <div id="koMsg" class="admin-msg"></div>
+    </div>
+
+    <div class="admin-section">
+      <h3>Third-Place Assignments (R32 matches)</h3>
+      <div id="koThirdPlaceAdmin"></div>
+      <div id="koTPMsg" class="admin-msg"></div>
+    </div>
+
+    <div class="admin-section">
+      <h3>Match Winners</h3>
+      <div id="koWinnersAdmin"></div>
+      <div id="koWMsg" class="admin-msg"></div>
+    </div>
+
+    <!-- Group Standings Admin -->
+    <div class="admin-section">
+      <h3>Group Standings (for 3rd-place rankings)</h3>
+      <div id="standingsAdmin"></div>
+      <button id="saveStandingsBtn" style="margin-top:8px;padding:6px 16px;background:#1a1a2e;color:white;border:none;border-radius:4px;cursor:pointer;">Save Standings</button>
+      <span id="standingsMsg" class="admin-msg"></span>
+    </div>
+
+    <div class="admin-section">
+      <button id="syncBtn" style="padding:6px 16px;background:#d32f2f;color:white;border:none;border-radius:4px;cursor:pointer;margin-right:8px;">Save All & Sync to GitHub</button>
+      <span id="syncMsg" class="admin-msg"></span>
+    </div>
+  </div>
 </div>
 <script>
 (function() {
@@ -419,6 +505,301 @@ td.aus-flag { color: #f57c00; font-weight: 700; }
   // Initial load: refresh scores immediately, then every 5 minutes
   refreshScores();
   setInterval(refreshScores, 300000);
+
+  /* ── Knockout Team Name Resolution ── */
+  let knockoutState = { group_slots: {}, third_place_assignments: {}, match_winners: {} };
+
+  function resolveSlot(slot, state) {
+    // Try group slots first (e.g. "1A", "2B", "3C")
+    if (state.group_slots && state.group_slots[slot]) return state.group_slots[slot];
+    // Try third-place assignments (e.g. "3ABCDF")
+    if (state.third_place_assignments && state.third_place_assignments[slot]) return state.third_place_assignments[slot];
+    // Try match winners (e.g. "W73", "RU101")
+    if (state.match_winners && state.match_winners[slot]) return state.match_winners[slot];
+    return null;
+  }
+
+  function resolveKnockoutName(rawName, state) {
+    // Patterns: "Winner #73" -> W73, "Winner M#89" -> W89, "Runner Up M#101" -> RU101
+    let m = rawName.match(/^Winner\s+M?#?(\d+)$/i);
+    if (m) {
+      const resolved = resolveSlot('W' + m[1], state);
+      return resolved || rawName;
+    }
+    m = rawName.match(/^Runner\s*Up\s+M?#?(\d+)/i);
+    if (m) {
+      const resolved = resolveSlot('RU' + m[1], state);
+      return resolved || rawName;
+    }
+    // Direct slot like "2A", "1E", "3ABCDF"
+    const resolved = resolveSlot(rawName.toUpperCase(), state);
+    return resolved || rawName;
+  }
+
+  async function refreshKnockoutDisplay() {
+    try {
+      const r = await fetch('/api/knockout-state?_=' + Date.now());
+      knockoutState = await r.json();
+    } catch(e) {
+      try {
+        const r = await fetch('knockout_state.json?_=' + Date.now());
+        knockoutState = await r.json();
+      } catch(e2) { /* no state file available */ }
+    }
+
+    for (const row of dataRows) {
+      const matchNum = parseInt(row.dataset.matchNum);
+      if (!matchNum || matchNum < 73) continue; // Only knockout matches
+      const cell = row.querySelector('.match-col');
+      const scoreCell = row.querySelector('.score-col');
+      const homeRaw = (row.getAttribute('data-home') || '');
+      const awayRaw = (row.getAttribute('data-away') || '');
+
+      const homeResolved = resolveKnockoutName(homeRaw, knockoutState);
+      const awayResolved = resolveKnockoutName(awayRaw, knockoutState);
+
+      const homeIsResolved = homeResolved !== homeRaw && !homeResolved.startsWith('Winner') && !homeResolved.startsWith('Runner') && !/^[123][A-Z]/.test(homeResolved) && !/^3[A-Z]+$/.test(homeResolved);
+      const awayIsResolved = awayResolved !== awayRaw && !awayResolved.startsWith('Winner') && !awayResolved.startsWith('Runner') && !/^[123][A-Z]/.test(awayResolved) && !/^3[A-Z]+$/.test(awayResolved);
+      const bothKnown = homeIsResolved && awayIsResolved;
+
+      const homeHtml = homeIsResolved ? '<span class="resolved">'+homeResolved+'</span>' : '<span class="unresolved">'+homeResolved+'</span>';
+      const awayHtml = awayIsResolved ? '<span class="resolved">'+awayResolved+'</span>' : '<span class="unresolved">'+awayResolved+'</span>';
+      cell.innerHTML = homeHtml + ' v ' + awayHtml;
+
+      row.setAttribute('data-knockout', bothKnown ? '0' : '1');
+      if (bothKnown && scoreCell && scoreCell.textContent.trim() === 'TBD') {
+        scoreCell.textContent = '';
+      }
+    }
+    // Re-apply filters after updating knockout status
+    filterMatches();
+  }
+
+  /* ── Third-Place Rankings Table ── */
+  function computeThirdPlaceRankings(standings) {
+    // Get 3rd place team from each group
+    const groups = {};
+    for (const s of standings) {
+      if (!groups[s.group]) groups[s.group] = [];
+      groups[s.group].push(s);
+    }
+    const thirds = [];
+    for (const [g, teams] of Object.entries(groups)) {
+      teams.sort((a, b) => b.pts - a.pts || b.gd - a.gd || b.gf - a.gf);
+      if (teams.length >= 3) {
+        const third = teams[2];
+        thirds.push({ team: third.team, group: third.group, pts: third.pts, gd: third.gd, gf: third.gf });
+      }
+    }
+    // Rank by pts, gd, gf
+    thirds.sort((a, b) => b.pts - a.pts || b.gd - a.gd || b.gf - a.gf);
+    return thirds.map((t, i) => ({ pos: i + 1, ...t }));
+  }
+
+  async function refreshThirdPlaceTable() {
+    let standings = [];
+    try {
+      const r = await fetch('/api/standings?_=' + Date.now());
+      const data = await r.json();
+      standings = data.standings || [];
+    } catch(e) {
+      try {
+        const r = await fetch('group_standings.json?_=' + Date.now());
+        const data = await r.json();
+        standings = data.standings || [];
+      } catch(e2) { /* no standings file */ }
+    }
+
+    const rankings = computeThirdPlaceRankings(standings);
+    const tbody = document.getElementById('thirdsBody');
+    if (!rankings.length) {
+      tbody.innerHTML = '<tr><td colspan="6" style="color:#999;">No standings data yet</td></tr>';
+      return;
+    }
+
+    let html = '';
+    for (const r of rankings) {
+      const cls = r.pos <= 8 ? 'qualified' : 'eliminated';
+      html += '<tr class="'+cls+'"><td>'+r.pos+'</td><td style="text-align:left;">'+r.team+'</td><td>'+r.group+'</td><td>'+r.pts+'</td><td>'+(r.gd > 0 ? '+'+r.gd : r.gd)+'</td><td>'+r.gf+'</td></tr>';
+      if (r.pos === 8) {
+        html += '<tr class="elim-line"><td colspan="6">━━━ Elimination Line ━━━</td></tr>';
+      }
+    }
+    tbody.innerHTML = html;
+  }
+
+  /* ── Admin Panel ── */
+  const adminPanel = document.getElementById('adminPanel');
+  const adminToggle = document.getElementById('adminToggle');
+  const isAdmin = new URLSearchParams(window.location.search).get('admin') === '1';
+  if (isAdmin) {
+    adminPanel.style.display = 'block';
+    adminToggle.style.display = 'inline-block';
+  }
+
+  adminToggle.addEventListener('click', () => {
+    const visible = adminPanel.style.display !== 'none';
+    adminPanel.style.display = visible ? 'none' : 'block';
+    adminToggle.textContent = visible ? 'Show Admin Panel' : 'Hide Admin Panel';
+  });
+
+  function buildKoSlotsAdmin() {
+    const container = document.getElementById('koSlotsAdmin');
+    if (!container) return;
+    const groups = 'ABCDEFGHIJKL'.split('');
+    let html = '';
+    for (const g of groups) {
+      for (const pos of ['1','2','3']) {
+        const slot = pos + g;
+        const val = (knockoutState.group_slots && knockoutState.group_slots[slot]) || '';
+        html += '<div class="admin-row"><label>'+slot+':</label><input type="text" id="ks_'+slot+'" value="'+val+'" placeholder="Team name"><button onclick="updateKoSlot(\''+slot+'\',\'group_slot\')">Set</button></div>';
+      }
+    }
+    container.innerHTML = html;
+  }
+
+  function buildKoThirdPlaceAdmin() {
+    const container = document.getElementById('koThirdPlaceAdmin');
+    if (!container) return;
+    const slots = ['3ABCDF','3CDFGH','3CEFHI','3EHIJK','3AEHIJ','3BEFIJ','3EFGIJ','3DEIJL'];
+    let html = '';
+    for (const slot of slots) {
+      const val = (knockoutState.third_place_assignments && knockoutState.third_place_assignments[slot]) || '';
+      html += '<div class="admin-row"><label>'+slot+':</label><input type="text" id="ktp_'+slot+'" value="'+val+'" placeholder="3rd place team"><button onclick="updateKoSlot(\''+slot+'\',\'third_place\')">Set</button></div>';
+    }
+    container.innerHTML = html;
+  }
+
+  function buildKoWinnersAdmin() {
+    const container = document.getElementById('koWinnersAdmin');
+    if (!container) return;
+    let html = '';
+    // Match winners W73-W104
+    for (let m = 73; m <= 104; m++) {
+      const slot = 'W' + m;
+      const val = (knockoutState.match_winners && knockoutState.match_winners[slot]) || '';
+      html += '<div class="admin-row"><label>'+slot+':</label><input type="text" id="kw_'+slot+'" value="'+val+'" placeholder="Winner"><button onclick="updateKoSlot(\''+slot+'\',\'match_winner\')">Set</button></div>';
+    }
+    // Runner-up slots for bronze final
+    const ruSlots = ['RU101','RU102'];
+    for (const slot of ruSlots) {
+      const val = (knockoutState.match_winners && knockoutState.match_winners[slot]) || '';
+      html += '<div class="admin-row"><label>'+slot+':</label><input type="text" id="kw_'+slot+'" value="'+val+'" placeholder="Runner Up"><button onclick="updateKoSlot(\''+slot+'\',\'match_winner\')">Set</button></div>';
+    }
+    container.innerHTML = html;
+  }
+
+  window.updateKoSlot = async function(slot, slotType) {
+    let inputId;
+    if (slotType === 'third_place') inputId = 'ktp_' + slot;
+    else if (slotType === 'match_winner') inputId = 'kw_' + slot;
+    else inputId = 'ks_' + slot;
+    const team = document.getElementById(inputId).value.trim();
+    if (!team) return;
+    try {
+      const r = await fetch('/api/knockout-update', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slot, team, slotType })
+      });
+      const data = await r.json();
+      if (data.ok) {
+        knockoutState = data.state;
+        document.getElementById('koMsg').textContent = 'Updated '+slot+' → '+team;
+        setTimeout(() => { document.getElementById('koMsg').textContent = ''; }, 2000);
+        refreshKnockoutDisplay();
+      }
+    } catch(e) {
+      document.getElementById('koMsg').textContent = 'Error: ' + e.message;
+    }
+  };
+
+  async function buildStandingsAdmin() {
+    const container = document.getElementById('standingsAdmin');
+    if (!container) return;
+    let standings = [];
+    try {
+      const r = await fetch('/api/standings?_=' + Date.now());
+      const data = await r.json();
+      standings = data.standings || [];
+    } catch(e) { /* no data */ }
+
+    // Group standings by group
+    const groups = {};
+    for (const s of standings) {
+      if (!groups[s.group]) groups[s.group] = [];
+      groups[s.group].push(s);
+    }
+
+    let html = '';
+    for (const g of 'ABCDEFGHIJKL'.split('')) {
+      const teams = groups[g] || [];
+      html += '<h4 style="margin:8px 0 2px;font-size:0.85rem;">Group '+g+'</h4>';
+      for (const t of teams) {
+        html += '<div class="thirds-admin-row">';
+        html += '<label>'+t.team+'</label>';
+        html += 'P:<input type="number" min="0" max="3" value="'+t.played+'" data-group="'+g+'" data-team="'+t.team+'" data-field="played">';
+        html += 'Pts:<input type="number" min="0" value="'+t.pts+'" data-group="'+g+'" data-team="'+t.team+'" data-field="pts">';
+        html += 'GD:<input type="number" value="'+t.gd+'" data-group="'+g+'" data-team="'+t.team+'" data-field="gd">';
+        html += 'GF:<input type="number" min="0" value="'+t.gf+'" data-group="'+g+'" data-team="'+t.team+'" data-field="gf">';
+        html += 'GA:<input type="number" min="0" value="'+(t.ga||0)+'" data-group="'+g+'" data-team="'+t.team+'" data-field="ga">';
+        html += '</div>';
+      }
+    }
+    container.innerHTML = html;
+  }
+
+  document.getElementById('saveStandingsBtn').addEventListener('click', async () => {
+    const inputs = document.querySelectorAll('#standingsAdmin input');
+    const teamMap = {};
+    for (const inp of inputs) {
+      const group = inp.dataset.group;
+      const team = inp.dataset.team;
+      const field = inp.dataset.field;
+      const val = parseInt(inp.value) || 0;
+      const key = group + '|' + team;
+      if (!teamMap[key]) teamMap[key] = { team, group };
+      teamMap[key][field] = val;
+    }
+    const standings = Object.values(teamMap);
+    try {
+      const r = await fetch('/api/standings-update', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ standings })
+      });
+      const data = await r.json();
+      if (data.ok) {
+        document.getElementById('standingsMsg').textContent = 'Standings saved!';
+        setTimeout(() => { document.getElementById('standingsMsg').textContent = ''; }, 2000);
+        refreshThirdPlaceTable();
+      }
+    } catch(e) {
+      document.getElementById('standingsMsg').textContent = 'Error: ' + e.message;
+    }
+  });
+
+  document.getElementById('syncBtn').addEventListener('click', () => {
+    document.getElementById('syncMsg').textContent = 'Data saved to server. Commit & push gh-pages/ to sync.';
+    setTimeout(() => { document.getElementById('syncMsg').textContent = ''; }, 3000);
+  });
+
+  // Initial admin panel build
+  if (isAdmin) {
+    setTimeout(() => {
+      buildKoSlotsAdmin();
+      buildKoThirdPlaceAdmin();
+      buildKoWinnersAdmin();
+      buildStandingsAdmin();
+    }, 500);
+  }
+
+  // Initial load
+  refreshKnockoutDisplay();
+  refreshThirdPlaceTable();
+  // Refresh knockout display every 2 min
+  setInterval(refreshKnockoutDisplay, 120000);
+  setInterval(refreshThirdPlaceTable, 300000);
 })();
 </script>
 </body>
