@@ -11,7 +11,7 @@
       "kickoff": "05:00",
       "home": "Mexico",
       "away": "South Africa",
-      "stage": "Group J",
+      "stage": "Group A",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -22,7 +22,7 @@
       "kickoff": "12:00",
       "home": "Korea Republic",
       "away": "Czechia",
-      "stage": "Group J",
+      "stage": "Group A",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -33,7 +33,7 @@
       "kickoff": "05:00",
       "home": "Canada",
       "away": "Bosnia-Herzegovina",
-      "stage": "Group D",
+      "stage": "Group B",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -44,7 +44,7 @@
       "kickoff": "11:00",
       "home": "USA",
       "away": "Paraguay",
-      "stage": "Group B",
+      "stage": "Group D",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -55,7 +55,7 @@
       "kickoff": "11:00",
       "home": "Haiti",
       "away": "Scotland",
-      "stage": "Group E",
+      "stage": "Group C",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -66,7 +66,7 @@
       "kickoff": "14:00",
       "home": "Australia",
       "away": "T\u00fcrkiye",
-      "stage": "Group B",
+      "stage": "Group D",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -77,7 +77,7 @@
       "kickoff": "08:00",
       "home": "Brazil",
       "away": "Morocco",
-      "stage": "Group E",
+      "stage": "Group C",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -88,7 +88,7 @@
       "kickoff": "05:00",
       "home": "Qatar",
       "away": "Switzerland",
-      "stage": "Group D",
+      "stage": "Group B",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -99,7 +99,7 @@
       "kickoff": "09:00",
       "home": "Cote d'Ivoire",
       "away": "Ecuador",
-      "stage": "Group H",
+      "stage": "Group E",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -110,7 +110,7 @@
       "kickoff": "03:00",
       "home": "Germany",
       "away": "Cura\u00e7ao",
-      "stage": "Group H",
+      "stage": "Group E",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -121,7 +121,7 @@
       "kickoff": "06:00",
       "home": "Netherlands",
       "away": "Japan",
-      "stage": "Group L",
+      "stage": "Group F",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -132,7 +132,7 @@
       "kickoff": "12:00",
       "home": "Sweden",
       "away": "Tunisia",
-      "stage": "Group L",
+      "stage": "Group F",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -143,7 +143,7 @@
       "kickoff": "08:00",
       "home": "Saudi Arabia",
       "away": "Uruguay",
-      "stage": "Group F",
+      "stage": "Group H",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -154,7 +154,7 @@
       "kickoff": "02:00",
       "home": "Spain",
       "away": "Cabo Verde",
-      "stage": "Group F",
+      "stage": "Group H",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -165,7 +165,7 @@
       "kickoff": "11:00",
       "home": "IR Iran",
       "away": "New Zealand",
-      "stage": "Group C",
+      "stage": "Group G",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -176,7 +176,7 @@
       "kickoff": "05:00",
       "home": "Belgium",
       "away": "Egypt",
-      "stage": "Group C",
+      "stage": "Group G",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -187,7 +187,7 @@
       "kickoff": "05:00",
       "home": "France",
       "away": "Senegal",
-      "stage": "Group K",
+      "stage": "Group I",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -198,7 +198,7 @@
       "kickoff": "08:00",
       "home": "Iraq",
       "away": "Norway",
-      "stage": "Group K",
+      "stage": "Group I",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -209,7 +209,7 @@
       "kickoff": "11:00",
       "home": "Argentina",
       "away": "Algeria",
-      "stage": "Group A",
+      "stage": "Group J",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -220,7 +220,7 @@
       "kickoff": "14:00",
       "home": "Austria",
       "away": "Jordan",
-      "stage": "Group A",
+      "stage": "Group J",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -231,7 +231,7 @@
       "kickoff": "09:00",
       "home": "Ghana",
       "away": "Panama",
-      "stage": "Group I",
+      "stage": "Group L",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -242,7 +242,7 @@
       "kickoff": "06:00",
       "home": "England",
       "away": "Croatia",
-      "stage": "Group I",
+      "stage": "Group L",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -253,7 +253,7 @@
       "kickoff": "03:00",
       "home": "Portugal",
       "away": "Congo DR",
-      "stage": "Group G",
+      "stage": "Group K",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -264,7 +264,7 @@
       "kickoff": "12:00",
       "home": "Uzbekistan",
       "away": "Colombia",
-      "stage": "Group G",
+      "stage": "Group K",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -275,7 +275,7 @@
       "kickoff": "02:00",
       "home": "Czechia",
       "away": "South Africa",
-      "stage": "Group J",
+      "stage": "Group A",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -286,7 +286,7 @@
       "kickoff": "05:00",
       "home": "Switzerland",
       "away": "Bosnia-Herzegovina",
-      "stage": "Group D",
+      "stage": "Group B",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -297,7 +297,7 @@
       "kickoff": "08:00",
       "home": "Canada",
       "away": "Qatar",
-      "stage": "Group D",
+      "stage": "Group B",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -308,7 +308,7 @@
       "kickoff": "11:00",
       "home": "Mexico",
       "away": "Korea Republic",
-      "stage": "Group J",
+      "stage": "Group A",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -319,7 +319,7 @@
       "kickoff": "10:30",
       "home": "Brazil",
       "away": "Haiti",
-      "stage": "Group E",
+      "stage": "Group C",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },
@@ -330,7 +330,7 @@
       "kickoff": "08:00",
       "home": "Scotland",
       "away": "Morocco",
-      "stage": "Group E",
+      "stage": "Group C",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -341,7 +341,7 @@
       "kickoff": "13:00",
       "home": "T\u00fcrkiye",
       "away": "Paraguay",
-      "stage": "Group B",
+      "stage": "Group D",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -352,7 +352,7 @@
       "kickoff": "05:00",
       "home": "USA",
       "away": "Australia",
-      "stage": "Group B",
+      "stage": "Group D",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -363,7 +363,7 @@
       "kickoff": "06:00",
       "home": "Germany",
       "away": "Cote d'Ivoire",
-      "stage": "Group H",
+      "stage": "Group E",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -374,7 +374,7 @@
       "kickoff": "10:00",
       "home": "Ecuador",
       "away": "Cura\u00e7ao",
-      "stage": "Group H",
+      "stage": "Group E",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -385,7 +385,7 @@
       "kickoff": "03:00",
       "home": "Netherlands",
       "away": "Sweden",
-      "stage": "Group L",
+      "stage": "Group F",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -396,7 +396,7 @@
       "kickoff": "14:00",
       "home": "Tunisia",
       "away": "Japan",
-      "stage": "Group L",
+      "stage": "Group F",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -407,7 +407,7 @@
       "kickoff": "08:00",
       "home": "Uruguay",
       "away": "Cabo Verde",
-      "stage": "Group F",
+      "stage": "Group H",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -418,7 +418,7 @@
       "kickoff": "02:00",
       "home": "Spain",
       "away": "Saudi Arabia",
-      "stage": "Group F",
+      "stage": "Group H",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -429,7 +429,7 @@
       "kickoff": "05:00",
       "home": "Belgium",
       "away": "IR Iran",
-      "stage": "Group C",
+      "stage": "Group G",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -440,7 +440,7 @@
       "kickoff": "11:00",
       "home": "New Zealand",
       "away": "Egypt",
-      "stage": "Group C",
+      "stage": "Group G",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -451,7 +451,7 @@
       "kickoff": "10:00",
       "home": "Norway",
       "away": "Senegal",
-      "stage": "Group K",
+      "stage": "Group I",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -462,7 +462,7 @@
       "kickoff": "07:00",
       "home": "France",
       "away": "Iraq",
-      "stage": "Group K",
+      "stage": "Group I",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -473,7 +473,7 @@
       "kickoff": "03:00",
       "home": "Argentina",
       "away": "Austria",
-      "stage": "Group A",
+      "stage": "Group J",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -484,7 +484,7 @@
       "kickoff": "13:00",
       "home": "Jordan",
       "away": "Algeria",
-      "stage": "Group A",
+      "stage": "Group J",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -495,7 +495,7 @@
       "kickoff": "06:00",
       "home": "England",
       "away": "Ghana",
-      "stage": "Group I",
+      "stage": "Group L",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -506,7 +506,7 @@
       "kickoff": "09:00",
       "home": "Panama",
       "away": "Croatia",
-      "stage": "Group I",
+      "stage": "Group L",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -517,7 +517,7 @@
       "kickoff": "03:00",
       "home": "Portugal",
       "away": "Uzbekistan",
-      "stage": "Group G",
+      "stage": "Group K",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -528,7 +528,7 @@
       "kickoff": "12:00",
       "home": "Colombia",
       "away": "Congo DR",
-      "stage": "Group G",
+      "stage": "Group K",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -539,7 +539,7 @@
       "kickoff": "08:00",
       "home": "Scotland",
       "away": "Brazil",
-      "stage": "Group E",
+      "stage": "Group C",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -550,7 +550,7 @@
       "kickoff": "08:00",
       "home": "Morocco",
       "away": "Haiti",
-      "stage": "Group E",
+      "stage": "Group C",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },
@@ -561,7 +561,7 @@
       "kickoff": "05:00",
       "home": "Switzerland",
       "away": "Canada",
-      "stage": "Group D",
+      "stage": "Group B",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -572,7 +572,7 @@
       "kickoff": "05:00",
       "home": "Bosnia-Herzegovina",
       "away": "Qatar",
-      "stage": "Group D",
+      "stage": "Group B",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },
@@ -583,7 +583,7 @@
       "kickoff": "11:00",
       "home": "Czechia",
       "away": "Mexico",
-      "stage": "Group J",
+      "stage": "Group A",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -594,7 +594,7 @@
       "kickoff": "11:00",
       "home": "South Africa",
       "away": "Korea Republic",
-      "stage": "Group J",
+      "stage": "Group A",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },
@@ -605,7 +605,7 @@
       "kickoff": "06:00",
       "home": "Cura\u00e7ao",
       "away": "Cote d'Ivoire",
-      "stage": "Group H",
+      "stage": "Group E",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },
@@ -616,7 +616,7 @@
       "kickoff": "06:00",
       "home": "Ecuador",
       "away": "Germany",
-      "stage": "Group H",
+      "stage": "Group E",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -627,7 +627,7 @@
       "kickoff": "09:00",
       "home": "Japan",
       "away": "Sweden",
-      "stage": "Group L",
+      "stage": "Group F",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -638,7 +638,7 @@
       "kickoff": "09:00",
       "home": "Tunisia",
       "away": "Netherlands",
-      "stage": "Group L",
+      "stage": "Group F",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },
@@ -649,7 +649,7 @@
       "kickoff": "12:00",
       "home": "T\u00fcrkiye",
       "away": "USA",
-      "stage": "Group B",
+      "stage": "Group D",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },
@@ -660,7 +660,7 @@
       "kickoff": "12:00",
       "home": "Paraguay",
       "away": "Australia",
-      "stage": "Group B",
+      "stage": "Group D",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -671,7 +671,7 @@
       "kickoff": "05:00",
       "home": "Norway",
       "away": "France",
-      "stage": "Group K",
+      "stage": "Group I",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -682,7 +682,7 @@
       "kickoff": "05:00",
       "home": "Senegal",
       "away": "Iraq",
-      "stage": "Group K",
+      "stage": "Group I",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },
@@ -693,7 +693,7 @@
       "kickoff": "13:00",
       "home": "Egypt",
       "away": "IR Iran",
-      "stage": "Group C",
+      "stage": "Group G",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },
@@ -704,7 +704,7 @@
       "kickoff": "13:00",
       "home": "New Zealand",
       "away": "Belgium",
-      "stage": "Group C",
+      "stage": "Group G",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -715,7 +715,7 @@
       "kickoff": "10:00",
       "home": "Cabo Verde",
       "away": "Saudi Arabia",
-      "stage": "Group F",
+      "stage": "Group H",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },
@@ -726,7 +726,7 @@
       "kickoff": "10:00",
       "home": "Uruguay",
       "away": "Spain",
-      "stage": "Group F",
+      "stage": "Group H",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -737,7 +737,7 @@
       "kickoff": "07:00",
       "home": "Panama",
       "away": "England",
-      "stage": "Group I",
+      "stage": "Group L",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -748,7 +748,7 @@
       "kickoff": "07:00",
       "home": "Croatia",
       "away": "Ghana",
-      "stage": "Group I",
+      "stage": "Group L",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },
@@ -759,7 +759,7 @@
       "kickoff": "12:00",
       "home": "Algeria",
       "away": "Austria",
-      "stage": "Group A",
+      "stage": "Group J",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },
@@ -770,7 +770,7 @@
       "kickoff": "12:00",
       "home": "Jordan",
       "away": "Argentina",
-      "stage": "Group A",
+      "stage": "Group J",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -781,7 +781,7 @@
       "kickoff": "09:30",
       "home": "Colombia",
       "away": "Portugal",
-      "stage": "Group G",
+      "stage": "Group K",
       "channel": "SBS / SBS On Demand",
       "is_known": true
     },
@@ -792,7 +792,7 @@
       "kickoff": "09:30",
       "home": "Congo DR",
       "away": "Uzbekistan",
-      "stage": "Group G",
+      "stage": "Group K",
       "channel": "VICELAND / SBS On Demand",
       "is_known": true
     },

@@ -2,7 +2,7 @@
   "standings": [
     {
       "team": "Mexico",
-      "group": "J",
+      "group": "A",
       "played": 3,
       "pts": 9,
       "gd": 6,
@@ -11,7 +11,7 @@
     },
     {
       "team": "South Africa",
-      "group": "J",
+      "group": "A",
       "played": 3,
       "pts": 4,
       "gd": -1,
@@ -20,7 +20,7 @@
     },
     {
       "team": "Korea Republic",
-      "group": "J",
+      "group": "A",
       "played": 3,
       "pts": 3,
       "gd": -1,
@@ -29,7 +29,7 @@
     },
     {
       "team": "Czechia",
-      "group": "J",
+      "group": "A",
       "played": 3,
       "pts": 1,
       "gd": -4,
@@ -38,7 +38,7 @@
     },
     {
       "team": "Canada",
-      "group": "D",
+      "group": "B",
       "played": 3,
       "pts": 4,
       "gd": 5,
@@ -47,7 +47,7 @@
     },
     {
       "team": "Bosnia-Herzegovina",
-      "group": "D",
+      "group": "B",
       "played": 3,
       "pts": 4,
       "gd": -1,
@@ -56,7 +56,7 @@
     },
     {
       "team": "Qatar",
-      "group": "D",
+      "group": "B",
       "played": 3,
       "pts": 1,
       "gd": -8,
@@ -65,7 +65,7 @@
     },
     {
       "team": "Switzerland",
-      "group": "D",
+      "group": "B",
       "played": 3,
       "pts": 7,
       "gd": 4,
@@ -74,7 +74,7 @@
     },
     {
       "team": "USA",
-      "group": "B",
+      "group": "D",
       "played": 3,
       "pts": 6,
       "gd": 4,
@@ -83,7 +83,7 @@
     },
     {
       "team": "Paraguay",
-      "group": "B",
+      "group": "D",
       "played": 3,
       "pts": 4,
       "gd": -2,
@@ -92,7 +92,7 @@
     },
     {
       "team": "Australia",
-      "group": "B",
+      "group": "D",
       "played": 3,
       "pts": 4,
       "gd": 0,
@@ -100,8 +100,8 @@
       "ga": 2
     },
     {
-      "team": "Türkiye",
-      "group": "B",
+      "team": "T\u00fcrkiye",
+      "group": "D",
       "played": 3,
       "pts": 3,
       "gd": -2,
@@ -110,7 +110,7 @@
     },
     {
       "team": "Brazil",
-      "group": "E",
+      "group": "C",
       "played": 3,
       "pts": 7,
       "gd": 6,
@@ -119,7 +119,7 @@
     },
     {
       "team": "Morocco",
-      "group": "E",
+      "group": "C",
       "played": 3,
       "pts": 7,
       "gd": 3,
@@ -128,7 +128,7 @@
     },
     {
       "team": "Haiti",
-      "group": "E",
+      "group": "C",
       "played": 3,
       "pts": 0,
       "gd": -6,
@@ -137,7 +137,7 @@
     },
     {
       "team": "Scotland",
-      "group": "E",
+      "group": "C",
       "played": 3,
       "pts": 3,
       "gd": -3,
@@ -146,7 +146,7 @@
     },
     {
       "team": "Germany",
-      "group": "H",
+      "group": "E",
       "played": 3,
       "pts": 6,
       "gd": 6,
@@ -154,8 +154,8 @@
       "ga": 4
     },
     {
-      "team": "Curaçao",
-      "group": "H",
+      "team": "Cura\u00e7ao",
+      "group": "E",
       "played": 3,
       "pts": 1,
       "gd": -8,
@@ -164,7 +164,7 @@
     },
     {
       "team": "Cote d'Ivoire",
-      "group": "H",
+      "group": "E",
       "played": 3,
       "pts": 6,
       "gd": 2,
@@ -173,7 +173,7 @@
     },
     {
       "team": "Ecuador",
-      "group": "H",
+      "group": "E",
       "played": 3,
       "pts": 4,
       "gd": 0,
@@ -182,7 +182,7 @@
     },
     {
       "team": "Netherlands",
-      "group": "L",
+      "group": "F",
       "played": 3,
       "pts": 7,
       "gd": 6,
@@ -191,7 +191,7 @@
     },
     {
       "team": "Japan",
-      "group": "L",
+      "group": "F",
       "played": 3,
       "pts": 5,
       "gd": 4,
@@ -200,7 +200,7 @@
     },
     {
       "team": "Sweden",
-      "group": "L",
+      "group": "F",
       "played": 3,
       "pts": 4,
       "gd": 0,
@@ -209,7 +209,7 @@
     },
     {
       "team": "Tunisia",
-      "group": "L",
+      "group": "F",
       "played": 3,
       "pts": 0,
       "gd": -10,
@@ -218,7 +218,7 @@
     },
     {
       "team": "Spain",
-      "group": "F",
+      "group": "H",
       "played": 3,
       "pts": 7,
       "gd": 5,
@@ -227,7 +227,7 @@
     },
     {
       "team": "Cabo Verde",
-      "group": "F",
+      "group": "H",
       "played": 3,
       "pts": 3,
       "gd": 0,
@@ -236,7 +236,7 @@
     },
     {
       "team": "Saudi Arabia",
-      "group": "F",
+      "group": "H",
       "played": 3,
       "pts": 2,
       "gd": -4,
@@ -245,7 +245,7 @@
     },
     {
       "team": "Uruguay",
-      "group": "F",
+      "group": "H",
       "played": 3,
       "pts": 2,
       "gd": -1,
@@ -254,7 +254,7 @@
     },
     {
       "team": "Belgium",
-      "group": "C",
+      "group": "G",
       "played": 3,
       "pts": 5,
       "gd": 4,
@@ -263,7 +263,7 @@
     },
     {
       "team": "Egypt",
-      "group": "C",
+      "group": "G",
       "played": 3,
       "pts": 5,
       "gd": 2,
@@ -272,7 +272,7 @@
     },
     {
       "team": "IR Iran",
-      "group": "C",
+      "group": "G",
       "played": 3,
       "pts": 3,
       "gd": 0,
@@ -281,7 +281,7 @@
     },
     {
       "team": "New Zealand",
-      "group": "C",
+      "group": "G",
       "played": 3,
       "pts": 1,
       "gd": -6,
@@ -290,7 +290,7 @@
     },
     {
       "team": "France",
-      "group": "K",
+      "group": "I",
       "played": 3,
       "pts": 9,
       "gd": 8,
@@ -299,7 +299,7 @@
     },
     {
       "team": "Senegal",
-      "group": "K",
+      "group": "I",
       "played": 3,
       "pts": 3,
       "gd": 2,
@@ -308,7 +308,7 @@
     },
     {
       "team": "Iraq",
-      "group": "K",
+      "group": "I",
       "played": 3,
       "pts": 0,
       "gd": -11,
@@ -317,7 +317,7 @@
     },
     {
       "team": "Norway",
-      "group": "K",
+      "group": "I",
       "played": 3,
       "pts": 6,
       "gd": 1,
@@ -326,7 +326,7 @@
     },
     {
       "team": "Argentina",
-      "group": "A",
+      "group": "J",
       "played": 2,
       "pts": 6,
       "gd": 5,
@@ -335,7 +335,7 @@
     },
     {
       "team": "Algeria",
-      "group": "A",
+      "group": "J",
       "played": 2,
       "pts": 3,
       "gd": -2,
@@ -344,7 +344,7 @@
     },
     {
       "team": "Austria",
-      "group": "A",
+      "group": "J",
       "played": 2,
       "pts": 3,
       "gd": 0,
@@ -353,7 +353,7 @@
     },
     {
       "team": "Jordan",
-      "group": "A",
+      "group": "J",
       "played": 2,
       "pts": 0,
       "gd": -3,
@@ -362,7 +362,7 @@
     },
     {
       "team": "Portugal",
-      "group": "G",
+      "group": "K",
       "played": 2,
       "pts": 4,
       "gd": 5,
@@ -371,7 +371,7 @@
     },
     {
       "team": "Congo DR",
-      "group": "G",
+      "group": "K",
       "played": 2,
       "pts": 1,
       "gd": -1,
@@ -380,7 +380,7 @@
     },
     {
       "team": "Uzbekistan",
-      "group": "G",
+      "group": "K",
       "played": 2,
       "pts": 0,
       "gd": -7,
@@ -389,7 +389,7 @@
     },
     {
       "team": "Colombia",
-      "group": "G",
+      "group": "K",
       "played": 2,
       "pts": 6,
       "gd": 3,
@@ -398,7 +398,7 @@
     },
     {
       "team": "England",
-      "group": "I",
+      "group": "L",
       "played": 3,
       "pts": 7,
       "gd": 4,
@@ -407,7 +407,7 @@
     },
     {
       "team": "Croatia",
-      "group": "I",
+      "group": "L",
       "played": 3,
       "pts": 6,
       "gd": 0,
@@ -416,7 +416,7 @@
     },
     {
       "team": "Ghana",
-      "group": "I",
+      "group": "L",
       "played": 3,
       "pts": 4,
       "gd": 0,
@@ -425,7 +425,7 @@
     },
     {
       "team": "Panama",
-      "group": "I",
+      "group": "L",
       "played": 3,
       "pts": 0,
       "gd": -4,
@@ -437,7 +437,7 @@
     {
       "pos": 1,
       "team": "Sweden",
-      "group": "L",
+      "group": "F",
       "pts": 4,
       "gd": 0,
       "gf": 7,
@@ -446,7 +446,7 @@
     {
       "pos": 2,
       "team": "Ecuador",
-      "group": "H",
+      "group": "E",
       "pts": 4,
       "gd": 0,
       "gf": 2,
@@ -455,7 +455,7 @@
     {
       "pos": 3,
       "team": "Ghana",
-      "group": "I",
+      "group": "L",
       "pts": 4,
       "gd": 0,
       "gf": 2,
@@ -464,7 +464,7 @@
     {
       "pos": 4,
       "team": "Bosnia-Herzegovina",
-      "group": "D",
+      "group": "B",
       "pts": 4,
       "gd": -1,
       "gf": 5,
@@ -473,7 +473,7 @@
     {
       "pos": 5,
       "team": "Paraguay",
-      "group": "B",
+      "group": "D",
       "pts": 4,
       "gd": -2,
       "gf": 2,
@@ -482,7 +482,7 @@
     {
       "pos": 6,
       "team": "Senegal",
-      "group": "K",
+      "group": "I",
       "pts": 3,
       "gd": 2,
       "gf": 8,
@@ -491,7 +491,7 @@
     {
       "pos": 7,
       "team": "IR Iran",
-      "group": "C",
+      "group": "G",
       "pts": 3,
       "gd": 0,
       "gf": 3,
@@ -500,7 +500,7 @@
     {
       "pos": 8,
       "team": "Korea Republic",
-      "group": "J",
+      "group": "A",
       "pts": 3,
       "gd": -1,
       "gf": 2,
@@ -509,7 +509,7 @@
     {
       "pos": 9,
       "team": "Algeria",
-      "group": "A",
+      "group": "J",
       "pts": 3,
       "gd": -2,
       "gf": 2,
@@ -518,7 +518,7 @@
     {
       "pos": 10,
       "team": "Scotland",
-      "group": "E",
+      "group": "C",
       "pts": 3,
       "gd": -3,
       "gf": 1,
@@ -527,7 +527,7 @@
     {
       "pos": 11,
       "team": "Uruguay",
-      "group": "F",
+      "group": "H",
       "pts": 2,
       "gd": -1,
       "gf": 3,
@@ -536,7 +536,7 @@
     {
       "pos": 12,
       "team": "Congo DR",
-      "group": "G",
+      "group": "K",
       "pts": 1,
       "gd": -1,
       "gf": 1,
@@ -544,37 +544,37 @@
     }
   ],
   "auto_slots": {
-    "1J": "Mexico",
-    "2J": "South Africa",
-    "3J": "Korea Republic",
-    "1D": "Switzerland",
-    "2D": "Canada",
-    "3D": "Bosnia-Herzegovina",
-    "1B": "USA",
-    "2B": "Australia",
-    "3B": "Paraguay",
-    "1E": "Brazil",
-    "2E": "Morocco",
-    "3E": "Scotland",
-    "1H": "Germany",
-    "2H": "Cote d'Ivoire",
-    "3H": "Ecuador",
-    "1L": "Netherlands",
-    "2L": "Japan",
-    "3L": "Sweden",
-    "1F": "Spain",
-    "2F": "Cabo Verde",
-    "3F": "Uruguay",
-    "1C": "Belgium",
-    "2C": "Egypt",
-    "3C": "IR Iran",
-    "1K": "France",
-    "2K": "Norway",
-    "3K": "Senegal",
-    "1I": "England",
-    "2I": "Croatia",
-    "3I": "Ghana"
+    "1A": "Mexico",
+    "2A": "South Africa",
+    "3A": "Korea Republic",
+    "1B": "Switzerland",
+    "2B": "Canada",
+    "3B": "Bosnia-Herzegovina",
+    "1D": "USA",
+    "2D": "Australia",
+    "3D": "Paraguay",
+    "1C": "Brazil",
+    "2C": "Morocco",
+    "3C": "Scotland",
+    "1E": "Germany",
+    "2E": "Cote d'Ivoire",
+    "3E": "Ecuador",
+    "1F": "Netherlands",
+    "2F": "Japan",
+    "3F": "Sweden",
+    "1H": "Spain",
+    "2H": "Cabo Verde",
+    "3H": "Uruguay",
+    "1G": "Belgium",
+    "2G": "Egypt",
+    "3G": "IR Iran",
+    "1I": "France",
+    "2I": "Norway",
+    "3I": "Senegal",
+    "1L": "England",
+    "2L": "Croatia",
+    "3L": "Ghana"
   },
   "total_results": 68,
-  "updated": "2026-06-28T00:55:07.747Z"
+  "updated": "2026-06-28T01:10:00.000Z"
 }
