@@ -100,7 +100,7 @@
       "ga": 2
     },
     {
-      "team": "T\u00fcrkiye",
+      "team": "Türkiye",
       "group": "D",
       "played": 3,
       "pts": 3,
@@ -154,7 +154,7 @@
       "ga": 4
     },
     {
-      "team": "Cura\u00e7ao",
+      "team": "Curaçao",
       "group": "E",
       "played": 3,
       "pts": 1,
@@ -576,5 +576,5 @@
     "3L": "Ghana"
   },
   "total_results": 68,
-  "updated": "2026-06-28T01:10:00.000Z"
+  "updated": "2026-06-28T01:09:53.821Z"
 }
