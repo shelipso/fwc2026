@@ -791,6 +791,17 @@
       "status": "FT",
       "stage": "Group K",
       "group": "K"
+    },
+    {
+      "match_num": 73,
+      "date": "2026-06-29",
+      "home": "South Africa",
+      "away": "Canada",
+      "home_score": 0,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Round of 32",
+      "group": "Round of 32"
     }
   ]
 }
