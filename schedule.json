@@ -13,7 +13,9 @@
       "away": "South Africa",
       "stage": "Group A",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "A",
+      "round": "Group A"
     },
     {
       "match_num": 2,
@@ -24,7 +26,9 @@
       "away": "Czechia",
       "stage": "Group A",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "A",
+      "round": "Group A"
     },
     {
       "match_num": 3,
@@ -35,7 +39,9 @@
       "away": "Bosnia-Herzegovina",
       "stage": "Group B",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "B",
+      "round": "Group B"
     },
     {
       "match_num": 4,
@@ -46,40 +52,9 @@
       "away": "Paraguay",
       "stage": "Group D",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 5,
-      "date": "2026-06-14",
-      "tx_start": "10:30",
-      "kickoff": "11:00",
-      "home": "Haiti",
-      "away": "Scotland",
-      "stage": "Group C",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 6,
-      "date": "2026-06-14",
-      "tx_start": "13:00",
-      "kickoff": "14:00",
-      "home": "Australia",
-      "away": "T\u00fcrkiye",
-      "stage": "Group D",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 7,
-      "date": "2026-06-14",
-      "tx_start": "07:30",
-      "kickoff": "08:00",
-      "home": "Brazil",
-      "away": "Morocco",
-      "stage": "Group C",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "D",
+      "round": "Group D"
     },
     {
       "match_num": 8,
@@ -90,18 +65,48 @@
       "away": "Switzerland",
       "stage": "Group B",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "B",
+      "round": "Group B"
     },
     {
-      "match_num": 9,
-      "date": "2026-06-15",
-      "tx_start": "08:30",
-      "kickoff": "09:00",
-      "home": "Cote d'Ivoire",
-      "away": "Ecuador",
-      "stage": "Group E",
+      "match_num": 7,
+      "date": "2026-06-14",
+      "tx_start": "07:30",
+      "kickoff": "08:00",
+      "home": "Brazil",
+      "away": "Morocco",
+      "stage": "Group C",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "C",
+      "round": "Group C"
+    },
+    {
+      "match_num": 5,
+      "date": "2026-06-14",
+      "tx_start": "10:30",
+      "kickoff": "11:00",
+      "home": "Haiti",
+      "away": "Scotland",
+      "stage": "Group C",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "C",
+      "round": "Group C"
+    },
+    {
+      "match_num": 6,
+      "date": "2026-06-14",
+      "tx_start": "13:00",
+      "kickoff": "14:00",
+      "home": "Australia",
+      "away": "Türkiye",
+      "stage": "Group D",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "D",
+      "round": "Group D"
     },
     {
       "match_num": 10,
@@ -109,10 +114,12 @@
       "tx_start": "02:30",
       "kickoff": "03:00",
       "home": "Germany",
-      "away": "Cura\u00e7ao",
+      "away": "Curaçao",
       "stage": "Group E",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "E",
+      "round": "Group E"
     },
     {
       "match_num": 11,
@@ -123,7 +130,22 @@
       "away": "Japan",
       "stage": "Group F",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "F",
+      "round": "Group F"
+    },
+    {
+      "match_num": 9,
+      "date": "2026-06-15",
+      "tx_start": "08:30",
+      "kickoff": "09:00",
+      "home": "Cote d'Ivoire",
+      "away": "Ecuador",
+      "stage": "Group E",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "E",
+      "round": "Group E"
     },
     {
       "match_num": 12,
@@ -134,18 +156,9 @@
       "away": "Tunisia",
       "stage": "Group F",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 13,
-      "date": "2026-06-16",
-      "tx_start": "07:30",
-      "kickoff": "08:00",
-      "home": "Saudi Arabia",
-      "away": "Uruguay",
-      "stage": "Group H",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "F",
+      "round": "Group F"
     },
     {
       "match_num": 14,
@@ -156,18 +169,9 @@
       "away": "Cabo Verde",
       "stage": "Group H",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 15,
-      "date": "2026-06-16",
-      "tx_start": "10:30",
-      "kickoff": "11:00",
-      "home": "IR Iran",
-      "away": "New Zealand",
-      "stage": "Group G",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "H",
+      "round": "Group H"
     },
     {
       "match_num": 16,
@@ -178,7 +182,35 @@
       "away": "Egypt",
       "stage": "Group G",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "G",
+      "round": "Group G"
+    },
+    {
+      "match_num": 13,
+      "date": "2026-06-16",
+      "tx_start": "07:30",
+      "kickoff": "08:00",
+      "home": "Saudi Arabia",
+      "away": "Uruguay",
+      "stage": "Group H",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "H",
+      "round": "Group H"
+    },
+    {
+      "match_num": 15,
+      "date": "2026-06-16",
+      "tx_start": "10:30",
+      "kickoff": "11:00",
+      "home": "IR Iran",
+      "away": "New Zealand",
+      "stage": "Group G",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "G",
+      "round": "Group G"
     },
     {
       "match_num": 17,
@@ -189,7 +221,9 @@
       "away": "Senegal",
       "stage": "Group I",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "I",
+      "round": "Group I"
     },
     {
       "match_num": 18,
@@ -200,7 +234,9 @@
       "away": "Norway",
       "stage": "Group I",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "I",
+      "round": "Group I"
     },
     {
       "match_num": 19,
@@ -211,7 +247,9 @@
       "away": "Algeria",
       "stage": "Group J",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "J",
+      "round": "Group J"
     },
     {
       "match_num": 20,
@@ -222,29 +260,9 @@
       "away": "Jordan",
       "stage": "Group J",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 21,
-      "date": "2026-06-18",
-      "tx_start": "08:30",
-      "kickoff": "09:00",
-      "home": "Ghana",
-      "away": "Panama",
-      "stage": "Group L",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 22,
-      "date": "2026-06-18",
-      "tx_start": "05:30",
-      "kickoff": "06:00",
-      "home": "England",
-      "away": "Croatia",
-      "stage": "Group L",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "J",
+      "round": "Group J"
     },
     {
       "match_num": 23,
@@ -255,7 +273,35 @@
       "away": "Congo DR",
       "stage": "Group K",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "K",
+      "round": "Group K"
+    },
+    {
+      "match_num": 22,
+      "date": "2026-06-18",
+      "tx_start": "05:30",
+      "kickoff": "06:00",
+      "home": "England",
+      "away": "Croatia",
+      "stage": "Group L",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "L",
+      "round": "Group L"
+    },
+    {
+      "match_num": 21,
+      "date": "2026-06-18",
+      "tx_start": "08:30",
+      "kickoff": "09:00",
+      "home": "Ghana",
+      "away": "Panama",
+      "stage": "Group L",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "L",
+      "round": "Group L"
     },
     {
       "match_num": 24,
@@ -266,7 +312,9 @@
       "away": "Colombia",
       "stage": "Group K",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "K",
+      "round": "Group K"
     },
     {
       "match_num": 25,
@@ -277,7 +325,9 @@
       "away": "South Africa",
       "stage": "Group A",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "A",
+      "round": "Group A"
     },
     {
       "match_num": 26,
@@ -288,7 +338,9 @@
       "away": "Bosnia-Herzegovina",
       "stage": "Group B",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "B",
+      "round": "Group B"
     },
     {
       "match_num": 27,
@@ -299,7 +351,9 @@
       "away": "Qatar",
       "stage": "Group B",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "B",
+      "round": "Group B"
     },
     {
       "match_num": 28,
@@ -310,40 +364,9 @@
       "away": "Korea Republic",
       "stage": "Group A",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 29,
-      "date": "2026-06-20",
-      "tx_start": "10:00",
-      "kickoff": "10:30",
-      "home": "Brazil",
-      "away": "Haiti",
-      "stage": "Group C",
-      "channel": "VICELAND / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 30,
-      "date": "2026-06-20",
-      "tx_start": "07:30",
-      "kickoff": "08:00",
-      "home": "Scotland",
-      "away": "Morocco",
-      "stage": "Group C",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 31,
-      "date": "2026-06-20",
-      "tx_start": "12:30",
-      "kickoff": "13:00",
-      "home": "T\u00fcrkiye",
-      "away": "Paraguay",
-      "stage": "Group D",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "A",
+      "round": "Group A"
     },
     {
       "match_num": 32,
@@ -354,29 +377,48 @@
       "away": "Australia",
       "stage": "Group D",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "D",
+      "round": "Group D"
     },
     {
-      "match_num": 33,
-      "date": "2026-06-21",
-      "tx_start": "05:30",
-      "kickoff": "06:00",
-      "home": "Germany",
-      "away": "Cote d'Ivoire",
-      "stage": "Group E",
+      "match_num": 30,
+      "date": "2026-06-20",
+      "tx_start": "07:30",
+      "kickoff": "08:00",
+      "home": "Scotland",
+      "away": "Morocco",
+      "stage": "Group C",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "C",
+      "round": "Group C"
     },
     {
-      "match_num": 34,
-      "date": "2026-06-21",
-      "tx_start": "09:30",
-      "kickoff": "10:00",
-      "home": "Ecuador",
-      "away": "Cura\u00e7ao",
-      "stage": "Group E",
+      "match_num": 29,
+      "date": "2026-06-20",
+      "tx_start": "10:00",
+      "kickoff": "10:30",
+      "home": "Brazil",
+      "away": "Haiti",
+      "stage": "Group C",
+      "channel": "VICELAND / SBS On Demand",
+      "is_known": true,
+      "group": "C",
+      "round": "Group C"
+    },
+    {
+      "match_num": 31,
+      "date": "2026-06-20",
+      "tx_start": "12:30",
+      "kickoff": "13:00",
+      "home": "Türkiye",
+      "away": "Paraguay",
+      "stage": "Group D",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "D",
+      "round": "Group D"
     },
     {
       "match_num": 35,
@@ -387,7 +429,35 @@
       "away": "Sweden",
       "stage": "Group F",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "F",
+      "round": "Group F"
+    },
+    {
+      "match_num": 33,
+      "date": "2026-06-21",
+      "tx_start": "05:30",
+      "kickoff": "06:00",
+      "home": "Germany",
+      "away": "Cote d'Ivoire",
+      "stage": "Group E",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "E",
+      "round": "Group E"
+    },
+    {
+      "match_num": 34,
+      "date": "2026-06-21",
+      "tx_start": "09:30",
+      "kickoff": "10:00",
+      "home": "Ecuador",
+      "away": "Curaçao",
+      "stage": "Group E",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "E",
+      "round": "Group E"
     },
     {
       "match_num": 36,
@@ -398,18 +468,9 @@
       "away": "Japan",
       "stage": "Group F",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 37,
-      "date": "2026-06-22",
-      "tx_start": "07:30",
-      "kickoff": "08:00",
-      "home": "Uruguay",
-      "away": "Cabo Verde",
-      "stage": "Group H",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "F",
+      "round": "Group F"
     },
     {
       "match_num": 38,
@@ -420,7 +481,9 @@
       "away": "Saudi Arabia",
       "stage": "Group H",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "H",
+      "round": "Group H"
     },
     {
       "match_num": 39,
@@ -431,7 +494,22 @@
       "away": "IR Iran",
       "stage": "Group G",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "G",
+      "round": "Group G"
+    },
+    {
+      "match_num": 37,
+      "date": "2026-06-22",
+      "tx_start": "07:30",
+      "kickoff": "08:00",
+      "home": "Uruguay",
+      "away": "Cabo Verde",
+      "stage": "Group H",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "H",
+      "round": "Group H"
     },
     {
       "match_num": 40,
@@ -442,29 +520,9 @@
       "away": "Egypt",
       "stage": "Group G",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 41,
-      "date": "2026-06-23",
-      "tx_start": "09:30",
-      "kickoff": "10:00",
-      "home": "Norway",
-      "away": "Senegal",
-      "stage": "Group I",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 42,
-      "date": "2026-06-23",
-      "tx_start": "06:30",
-      "kickoff": "07:00",
-      "home": "France",
-      "away": "Iraq",
-      "stage": "Group I",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "G",
+      "round": "Group G"
     },
     {
       "match_num": 43,
@@ -475,7 +533,35 @@
       "away": "Austria",
       "stage": "Group J",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "J",
+      "round": "Group J"
+    },
+    {
+      "match_num": 42,
+      "date": "2026-06-23",
+      "tx_start": "06:30",
+      "kickoff": "07:00",
+      "home": "France",
+      "away": "Iraq",
+      "stage": "Group I",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "I",
+      "round": "Group I"
+    },
+    {
+      "match_num": 41,
+      "date": "2026-06-23",
+      "tx_start": "09:30",
+      "kickoff": "10:00",
+      "home": "Norway",
+      "away": "Senegal",
+      "stage": "Group I",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "I",
+      "round": "Group I"
     },
     {
       "match_num": 44,
@@ -486,29 +572,9 @@
       "away": "Algeria",
       "stage": "Group J",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 45,
-      "date": "2026-06-24",
-      "tx_start": "05:30",
-      "kickoff": "06:00",
-      "home": "England",
-      "away": "Ghana",
-      "stage": "Group L",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 46,
-      "date": "2026-06-24",
-      "tx_start": "08:30",
-      "kickoff": "09:00",
-      "home": "Panama",
-      "away": "Croatia",
-      "stage": "Group L",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "J",
+      "round": "Group J"
     },
     {
       "match_num": 47,
@@ -519,7 +585,35 @@
       "away": "Uzbekistan",
       "stage": "Group K",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "K",
+      "round": "Group K"
+    },
+    {
+      "match_num": 45,
+      "date": "2026-06-24",
+      "tx_start": "05:30",
+      "kickoff": "06:00",
+      "home": "England",
+      "away": "Ghana",
+      "stage": "Group L",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "L",
+      "round": "Group L"
+    },
+    {
+      "match_num": 46,
+      "date": "2026-06-24",
+      "tx_start": "08:30",
+      "kickoff": "09:00",
+      "home": "Panama",
+      "away": "Croatia",
+      "stage": "Group L",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "L",
+      "round": "Group L"
     },
     {
       "match_num": 48,
@@ -530,29 +624,9 @@
       "away": "Congo DR",
       "stage": "Group K",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 49,
-      "date": "2026-06-25",
-      "tx_start": "07:30",
-      "kickoff": "08:00",
-      "home": "Scotland",
-      "away": "Brazil",
-      "stage": "Group C",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 50,
-      "date": "2026-06-25",
-      "tx_start": "07:30",
-      "kickoff": "08:00",
-      "home": "Morocco",
-      "away": "Haiti",
-      "stage": "Group C",
-      "channel": "VICELAND / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "K",
+      "round": "Group K"
     },
     {
       "match_num": 51,
@@ -563,7 +637,9 @@
       "away": "Canada",
       "stage": "Group B",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "B",
+      "round": "Group B"
     },
     {
       "match_num": 52,
@@ -574,7 +650,35 @@
       "away": "Qatar",
       "stage": "Group B",
       "channel": "VICELAND / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "B",
+      "round": "Group B"
+    },
+    {
+      "match_num": 49,
+      "date": "2026-06-25",
+      "tx_start": "07:30",
+      "kickoff": "08:00",
+      "home": "Scotland",
+      "away": "Brazil",
+      "stage": "Group C",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "C",
+      "round": "Group C"
+    },
+    {
+      "match_num": 50,
+      "date": "2026-06-25",
+      "tx_start": "07:30",
+      "kickoff": "08:00",
+      "home": "Morocco",
+      "away": "Haiti",
+      "stage": "Group C",
+      "channel": "VICELAND / SBS On Demand",
+      "is_known": true,
+      "group": "C",
+      "round": "Group C"
     },
     {
       "match_num": 53,
@@ -585,7 +689,9 @@
       "away": "Mexico",
       "stage": "Group A",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "A",
+      "round": "Group A"
     },
     {
       "match_num": 54,
@@ -596,18 +702,22 @@
       "away": "Korea Republic",
       "stage": "Group A",
       "channel": "VICELAND / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "A",
+      "round": "Group A"
     },
     {
       "match_num": 55,
       "date": "2026-06-26",
       "tx_start": "05:30",
       "kickoff": "06:00",
-      "home": "Cura\u00e7ao",
+      "home": "Curaçao",
       "away": "Cote d'Ivoire",
       "stage": "Group E",
       "channel": "VICELAND / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "E",
+      "round": "Group E"
     },
     {
       "match_num": 56,
@@ -618,7 +728,9 @@
       "away": "Germany",
       "stage": "Group E",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "E",
+      "round": "Group E"
     },
     {
       "match_num": 57,
@@ -629,7 +741,9 @@
       "away": "Sweden",
       "stage": "Group F",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "F",
+      "round": "Group F"
     },
     {
       "match_num": 58,
@@ -640,18 +754,22 @@
       "away": "Netherlands",
       "stage": "Group F",
       "channel": "VICELAND / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "F",
+      "round": "Group F"
     },
     {
       "match_num": 59,
       "date": "2026-06-26",
       "tx_start": "11:30",
       "kickoff": "12:00",
-      "home": "T\u00fcrkiye",
+      "home": "Türkiye",
       "away": "USA",
       "stage": "Group D",
       "channel": "VICELAND / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "D",
+      "round": "Group D"
     },
     {
       "match_num": 60,
@@ -662,7 +780,9 @@
       "away": "Australia",
       "stage": "Group D",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "D",
+      "round": "Group D"
     },
     {
       "match_num": 61,
@@ -673,7 +793,9 @@
       "away": "France",
       "stage": "Group I",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "I",
+      "round": "Group I"
     },
     {
       "match_num": 62,
@@ -684,29 +806,9 @@
       "away": "Iraq",
       "stage": "Group I",
       "channel": "VICELAND / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 63,
-      "date": "2026-06-27",
-      "tx_start": "12:30",
-      "kickoff": "13:00",
-      "home": "Egypt",
-      "away": "IR Iran",
-      "stage": "Group G",
-      "channel": "VICELAND / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 64,
-      "date": "2026-06-27",
-      "tx_start": "12:30",
-      "kickoff": "13:00",
-      "home": "New Zealand",
-      "away": "Belgium",
-      "stage": "Group G",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "I",
+      "round": "Group I"
     },
     {
       "match_num": 65,
@@ -717,7 +819,9 @@
       "away": "Saudi Arabia",
       "stage": "Group H",
       "channel": "VICELAND / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "H",
+      "round": "Group H"
     },
     {
       "match_num": 66,
@@ -728,7 +832,35 @@
       "away": "Spain",
       "stage": "Group H",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "H",
+      "round": "Group H"
+    },
+    {
+      "match_num": 63,
+      "date": "2026-06-27",
+      "tx_start": "12:30",
+      "kickoff": "13:00",
+      "home": "Egypt",
+      "away": "IR Iran",
+      "stage": "Group G",
+      "channel": "VICELAND / SBS On Demand",
+      "is_known": true,
+      "group": "G",
+      "round": "Group G"
+    },
+    {
+      "match_num": 64,
+      "date": "2026-06-27",
+      "tx_start": "12:30",
+      "kickoff": "13:00",
+      "home": "New Zealand",
+      "away": "Belgium",
+      "stage": "Group G",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "G",
+      "round": "Group G"
     },
     {
       "match_num": 67,
@@ -739,7 +871,9 @@
       "away": "England",
       "stage": "Group L",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "L",
+      "round": "Group L"
     },
     {
       "match_num": 68,
@@ -750,29 +884,9 @@
       "away": "Ghana",
       "stage": "Group L",
       "channel": "VICELAND / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 69,
-      "date": "2026-06-28",
-      "tx_start": "11:30",
-      "kickoff": "12:00",
-      "home": "Algeria",
-      "away": "Austria",
-      "stage": "Group J",
-      "channel": "VICELAND / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 70,
-      "date": "2026-06-28",
-      "tx_start": "11:30",
-      "kickoff": "12:00",
-      "home": "Jordan",
-      "away": "Argentina",
-      "stage": "Group J",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "L",
+      "round": "Group L"
     },
     {
       "match_num": 71,
@@ -783,7 +897,9 @@
       "away": "Portugal",
       "stage": "Group K",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "K",
+      "round": "Group K"
     },
     {
       "match_num": 72,
@@ -794,194 +910,243 @@
       "away": "Uzbekistan",
       "stage": "Group K",
       "channel": "VICELAND / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "K",
+      "round": "Group K"
+    },
+    {
+      "match_num": 69,
+      "date": "2026-06-28",
+      "tx_start": "11:30",
+      "kickoff": "12:00",
+      "home": "Algeria",
+      "away": "Austria",
+      "stage": "Group J",
+      "channel": "VICELAND / SBS On Demand",
+      "is_known": true,
+      "group": "J",
+      "round": "Group J"
+    },
+    {
+      "match_num": 70,
+      "date": "2026-06-28",
+      "tx_start": "11:30",
+      "kickoff": "12:00",
+      "home": "Jordan",
+      "away": "Argentina",
+      "stage": "Group J",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "J",
+      "round": "Group J"
     },
     {
       "match_num": 73,
       "date": "2026-06-29",
       "tx_start": "04:30",
       "kickoff": "05:00",
-      "home": "2A",
-      "away": "2B",
+      "home": "South Africa",
+      "away": "Canada",
       "stage": "Round of 32",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 74,
-      "date": "2026-06-30",
-      "tx_start": "06:00",
-      "kickoff": "06:30",
-      "home": "1E",
-      "away": "3ABCDF",
-      "stage": "Round of 32",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 75,
-      "date": "2026-06-30",
-      "tx_start": "10:30",
-      "kickoff": "11:00",
-      "home": "1F",
-      "away": "2C",
-      "stage": "Round of 32",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
     },
     {
       "match_num": 76,
       "date": "2026-06-30",
       "tx_start": "02:30",
       "kickoff": "03:00",
-      "home": "1C",
-      "away": "2F",
+      "home": "Brazil",
+      "away": "Japan",
       "stage": "Round of 32",
       "channel": "VICELAND / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
     },
     {
-      "match_num": 77,
-      "date": "2026-07-01",
-      "tx_start": "06:30",
-      "kickoff": "07:00",
-      "home": "1I",
-      "away": "3CDFGH",
+      "match_num": 74,
+      "date": "2026-06-30",
+      "tx_start": "06:00",
+      "kickoff": "06:30",
+      "home": "Germany",
+      "away": "Paraguay",
       "stage": "Round of 32",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
+    },
+    {
+      "match_num": 75,
+      "date": "2026-06-30",
+      "tx_start": "10:30",
+      "kickoff": "11:00",
+      "home": "Netherlands",
+      "away": "Morocco",
+      "stage": "Round of 32",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
     },
     {
       "match_num": 78,
       "date": "2026-07-01",
       "tx_start": "02:30",
       "kickoff": "03:00",
-      "home": "2E",
-      "away": "2I",
+      "home": "Cote d'Ivoire",
+      "away": "Norway",
       "stage": "Round of 32",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
+    },
+    {
+      "match_num": 77,
+      "date": "2026-07-01",
+      "tx_start": "06:30",
+      "kickoff": "07:00",
+      "home": "France",
+      "away": "Sweden",
+      "stage": "Round of 32",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
     },
     {
       "match_num": 79,
       "date": "2026-07-01",
       "tx_start": "10:30",
       "kickoff": "11:00",
-      "home": "1A",
-      "away": "3CEFHI",
+      "home": "Mexico",
+      "away": "Ecuador",
       "stage": "Round of 32",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
     },
     {
       "match_num": 80,
       "date": "2026-07-02",
       "tx_start": "01:30",
       "kickoff": "02:00",
-      "home": "1L",
-      "away": "3EHIJK",
+      "home": "England",
+      "away": "Congo DR",
       "stage": "Round of 32",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 81,
-      "date": "2026-07-02",
-      "tx_start": "09:30",
-      "kickoff": "10:00",
-      "home": "1D",
-      "away": "3BEFIJ",
-      "stage": "Round of 32",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
     },
     {
       "match_num": 82,
       "date": "2026-07-02",
       "tx_start": "05:30",
       "kickoff": "06:00",
-      "home": "1G",
-      "away": "3AEHIJ",
+      "home": "Belgium",
+      "away": "Senegal",
       "stage": "Round of 32",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
     },
     {
-      "match_num": 83,
-      "date": "2026-07-03",
-      "tx_start": "08:30",
-      "kickoff": "09:00",
-      "home": "2K",
-      "away": "2L",
+      "match_num": 81,
+      "date": "2026-07-02",
+      "tx_start": "09:30",
+      "kickoff": "10:00",
+      "home": "USA",
+      "away": "Bosnia-Herzegovina",
       "stage": "Round of 32",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
     },
     {
       "match_num": 84,
       "date": "2026-07-03",
       "tx_start": "04:30",
       "kickoff": "05:00",
-      "home": "1H",
-      "away": "2J",
+      "home": "Spain",
+      "away": "Austria",
       "stage": "Round of 32",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
+    },
+    {
+      "match_num": 83,
+      "date": "2026-07-03",
+      "tx_start": "08:30",
+      "kickoff": "09:00",
+      "home": "Portugal",
+      "away": "Croatia",
+      "stage": "Round of 32",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
     },
     {
       "match_num": 85,
       "date": "2026-07-03",
       "tx_start": "12:30",
       "kickoff": "13:00",
-      "home": "1B",
-      "away": "3EFGIJ",
+      "home": "Switzerland",
+      "away": "Algeria",
       "stage": "Round of 32",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 86,
-      "date": "2026-07-04",
-      "tx_start": "07:30",
-      "kickoff": "08:00",
-      "home": "1J",
-      "away": "2H",
-      "stage": "Round of 32",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
-    },
-    {
-      "match_num": 87,
-      "date": "2026-07-04",
-      "tx_start": "11:00",
-      "kickoff": "11:30",
-      "home": "1K",
-      "away": "3DEIJL",
-      "stage": "Round of 32",
-      "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
     },
     {
       "match_num": 88,
       "date": "2026-07-04",
       "tx_start": "03:30",
       "kickoff": "04:00",
-      "home": "2D",
-      "away": "2G",
+      "home": "Australia",
+      "away": "Egypt",
       "stage": "Round of 32",
       "channel": "SBS / SBS On Demand",
-      "is_known": true
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
     },
     {
-      "match_num": 89,
-      "date": "2026-07-05",
-      "tx_start": "06:30",
-      "kickoff": "07:00",
-      "home": "Winner #74",
-      "away": "Winner #77",
-      "stage": "Round of 16",
+      "match_num": 86,
+      "date": "2026-07-04",
+      "tx_start": "07:30",
+      "kickoff": "08:00",
+      "home": "Argentina",
+      "away": "Cabo Verde",
+      "stage": "Round of 32",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
+    },
+    {
+      "match_num": 87,
+      "date": "2026-07-04",
+      "tx_start": "11:00",
+      "kickoff": "11:30",
+      "home": "Colombia",
+      "away": "Ghana",
+      "stage": "Round of 32",
+      "channel": "SBS / SBS On Demand",
+      "is_known": true,
+      "group": "Round of 32",
+      "round": "Round of 32"
     },
     {
       "match_num": 90,
@@ -992,7 +1157,22 @@
       "away": "Winner #75",
       "stage": "Round of 16",
       "channel": "VICELAND / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Round of 16",
+      "round": "Round of 16"
+    },
+    {
+      "match_num": 89,
+      "date": "2026-07-05",
+      "tx_start": "06:30",
+      "kickoff": "07:00",
+      "home": "Winner #74",
+      "away": "Winner #77",
+      "stage": "Round of 16",
+      "channel": "SBS / SBS On Demand",
+      "is_known": false,
+      "group": "Round of 16",
+      "round": "Round of 16"
     },
     {
       "match_num": 91,
@@ -1003,7 +1183,9 @@
       "away": "Winner #78",
       "stage": "Round of 16",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Round of 16",
+      "round": "Round of 16"
     },
     {
       "match_num": 92,
@@ -1014,7 +1196,9 @@
       "away": "Winner #80",
       "stage": "Round of 16",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Round of 16",
+      "round": "Round of 16"
     },
     {
       "match_num": 93,
@@ -1025,7 +1209,9 @@
       "away": "Winner #84",
       "stage": "Round of 16",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Round of 16",
+      "round": "Round of 16"
     },
     {
       "match_num": 94,
@@ -1036,7 +1222,9 @@
       "away": "Winner #82",
       "stage": "Round of 16",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Round of 16",
+      "round": "Round of 16"
     },
     {
       "match_num": 95,
@@ -1047,7 +1235,9 @@
       "away": "Winner #88",
       "stage": "Round of 16",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Round of 16",
+      "round": "Round of 16"
     },
     {
       "match_num": 96,
@@ -1058,7 +1248,9 @@
       "away": "Winner #87",
       "stage": "Round of 16",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Round of 16",
+      "round": "Round of 16"
     },
     {
       "match_num": 97,
@@ -1069,7 +1261,9 @@
       "away": "Winner M#90",
       "stage": "Quarter-Finals",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Quarter-Finals",
+      "round": "Quarter-Finals"
     },
     {
       "match_num": 98,
@@ -1080,7 +1274,9 @@
       "away": "Winner M#94",
       "stage": "Quarter-Finals",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Quarter-Finals",
+      "round": "Quarter-Finals"
     },
     {
       "match_num": 99,
@@ -1091,7 +1287,9 @@
       "away": "Winner M#92",
       "stage": "Quarter-Finals",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Quarter-Finals",
+      "round": "Quarter-Finals"
     },
     {
       "match_num": 100,
@@ -1102,7 +1300,9 @@
       "away": "Winner M#96",
       "stage": "Quarter-Finals",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Quarter-Finals",
+      "round": "Quarter-Finals"
     },
     {
       "match_num": 101,
@@ -1113,7 +1313,9 @@
       "away": "Winner M#98",
       "stage": "Semi-Finals",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Semi-Finals",
+      "round": "Semi-Finals"
     },
     {
       "match_num": 102,
@@ -1124,7 +1326,9 @@
       "away": "Winner M#100",
       "stage": "Semi-Finals",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Semi-Finals",
+      "round": "Semi-Finals"
     },
     {
       "match_num": 103,
@@ -1135,7 +1339,9 @@
       "away": "Runner up M#102",
       "stage": "Bronze Final",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Bronze Final",
+      "round": "Bronze Final"
     },
     {
       "match_num": 104,
@@ -1146,7 +1352,9 @@
       "away": "Winner M#102",
       "stage": "Final",
       "channel": "SBS / SBS On Demand",
-      "is_known": false
+      "is_known": false,
+      "group": "Final",
+      "round": "Final"
     }
   ],
   "total_matches": 104
