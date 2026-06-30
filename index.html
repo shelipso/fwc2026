@@ -528,9 +528,44 @@ td.aus-flag { color: #f57c00; font-weight: 700; }
   /** Parse 'HH:MM' kickoff into Date (AEST, on match date) */
   function parseKickoff(dateStr, kickoffStr) {
     const [h, m] = kickoffStr.split(':').map(Number);
-    const d = new Date(dateStr + 'T00:00:00+10:00');
-    d.setHours(h, m, 0, 0);
+    const d = new Date(dateStr + 'T' + String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0') + ':00+10:00');
     return d;
+  }
+
+  /** Convert all kickoff times from AEST to browser local time */
+  function convertTimesToLocal() {
+    const timeHeader = document.querySelector('th.time-col');
+    if (timeHeader && timeHeader.textContent.trim() === 'AEST') {
+      timeHeader.textContent = 'Time';
+    }
+
+    const subtitle = document.querySelector('.header p');
+    if (subtitle) {
+      subtitle.innerHTML = subtitle.innerHTML.replace(/\(AEST times\)/g, '(times in your local timezone)');
+    }
+
+    for (const row of dataRows) {
+      const dateStr = row.getAttribute('data-date');
+      const timeCell = row.querySelector('.time-col');
+      if (!dateStr || !timeCell) continue;
+      const kickoffAEST = timeCell.getAttribute('data-kickoff-aest') || timeCell.textContent.trim();
+      if (!/^\d{2}:\d{2}$/.test(kickoffAEST)) continue;
+
+      // Save original AEST time once
+      if (!timeCell.hasAttribute('data-kickoff-aest')) {
+        timeCell.setAttribute('data-kickoff-aest', kickoffAEST);
+      }
+
+      const [h, m] = kickoffAEST.split(':').map(Number);
+      // Construct AEST datetime, JS auto-converts to local when we read getHours()
+      const aestDate = new Date(dateStr + 'T' + String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0') + ':00+10:00');
+      if (isNaN(aestDate.getTime())) continue;
+
+      const localH = aestDate.getHours();
+      const localM = aestDate.getMinutes();
+      const localStr = String(localH).padStart(2,'0') + ':' + String(localM).padStart(2,'0');
+      timeCell.textContent = localStr;
+    }
   }
 
   /** Compute what to show in the score cell and which CSS classes */
@@ -750,7 +785,7 @@ td.aus-flag { color: #f57c00; font-weight: 700; }
         const matchNum = parseInt(row.dataset.matchNum);
         if (!matchNum) continue;
         const date = row.getAttribute('data-date') || '';
-        const kickoff = row.querySelector('.time-col')?.textContent || '';
+        const kickoff = (row.querySelector('.time-col')?.getAttribute('data-kickoff-aest')) || row.querySelector('.time-col')?.textContent || '';
         const isKnockout = row.getAttribute('data-knockout') === '1';
         const res = results.find(r => r.match_num === matchNum);
         const cell = row.querySelector('.score-col');
@@ -786,6 +821,8 @@ td.aus-flag { color: #f57c00; font-weight: 700; }
         }
       }
     } catch(e) { /* silent */ }
+    // Re-apply local time conversion after score refresh
+    convertTimesToLocal();
   }
 
   // Fix pre-rendered date-today / today classes: static HTML has stale classes
@@ -814,7 +851,7 @@ td.aus-flag { color: #f57c00; font-weight: 700; }
   }
 
   // Initial load: refresh scores immediately, then every 5 minutes
-  refreshScores();
+  refreshScores().then(() => convertTimesToLocal());
   setInterval(refreshScores, 300000);
 
   /* ── Knockout Team Name Resolution ── */
