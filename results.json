@@ -802,6 +802,45 @@
       "status": "FT",
       "stage": "Round of 32",
       "group": "Round of 32"
+    },
+    {
+      "match_num": 74,
+      "date": "2026-06-29",
+      "home": "Germany",
+      "away": "Paraguay",
+      "home_score": 1,
+      "away_score": 1,
+      "home_shootout": 3,
+      "away_shootout": 4,
+      "status": "FT",
+      "hasPenalties": true,
+      "stage": "Round of 32",
+      "group": "Round of 32"
+    },
+    {
+      "match_num": 75,
+      "date": "2026-06-30",
+      "home": "Netherlands",
+      "away": "Morocco",
+      "home_score": 1,
+      "away_score": 1,
+      "home_shootout": 2,
+      "away_shootout": 3,
+      "status": "FT",
+      "hasPenalties": true,
+      "stage": "Round of 32",
+      "group": "Round of 32"
+    },
+    {
+      "match_num": 76,
+      "date": "2026-06-29",
+      "home": "Brazil",
+      "away": "Japan",
+      "home_score": 2,
+      "away_score": 1,
+      "status": "FT",
+      "stage": "Round of 32",
+      "group": "Round of 32"
     }
   ]
 }
